@@ -10,7 +10,7 @@ Install from the GitHub repository with your preferred package manager:
 npm install github:RussellBloxwich/cfui#v0.1.1
 pnpm add github:RussellBloxwich/cfui#v0.1.1
 yarn add github:RussellBloxwich/cfui#v0.1.1
-bun add github:RussellBloxwich/cfui#v0.1.1
+bun add cfui@github:RussellBloxwich/cfui#v0.1.1
 ```
 
 Run one of those commands. Your application must also provide `react` and `react-dom` at version 19. Release tags include the built files, so installation does not depend on running CFUI's build scripts. You can substitute a full commit SHA for the tag when you need an immutable Git dependency.

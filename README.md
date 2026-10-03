@@ -32,7 +32,7 @@ pnpm add github:RussellBloxwich/cfui#v0.1.1
 yarn add github:RussellBloxwich/cfui#v0.1.1
 
 # Bun
-bun add github:RussellBloxwich/cfui#v0.1.1
+bun add cfui@github:RussellBloxwich/cfui#v0.1.1
 ```
 
 Your application needs React 19 and React DOM 19. Pin a release tag or commit for reproducible installs.
