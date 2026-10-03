@@ -23,16 +23,16 @@ Choose your package manager. These commands install the same tagged release; no 
 
 ```sh
 # npm
-npm install github:RussellBloxwich/cfui#v0.1.0
+npm install github:RussellBloxwich/cfui#v0.1.1
 
 # pnpm
-pnpm add github:RussellBloxwich/cfui#v0.1.0
+pnpm add github:RussellBloxwich/cfui#v0.1.1
 
 # Yarn
-yarn add github:RussellBloxwich/cfui#v0.1.0
+yarn add github:RussellBloxwich/cfui#v0.1.1
 
 # Bun
-bun add github:RussellBloxwich/cfui#v0.1.0
+bun add github:RussellBloxwich/cfui#v0.1.1
 ```
 
 Your application needs React 19 and React DOM 19. Pin a release tag or commit for reproducible installs.

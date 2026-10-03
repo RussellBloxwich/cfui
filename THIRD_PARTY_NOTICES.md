@@ -64,4 +64,4 @@ Inter Variable (Latin, weight axis) is distributed under SIL Open Font License 1
 
 ## External dependencies
 
-Runtime dependencies remain separately licensed packages; CFUI does not relicense them. Radix UI, React, Phosphor Icons, TanStack Table, clsx, cmdk, date-fns, Embla Carousel, input-otp, React Day Picker, React Hook Form, React Resizable Panels, Recharts, Sonner, and tailwind-merge use MIT licenses. class-variance-authority uses Apache License 2.0. Refer to each installed dependency for its full license and copyright notice. Development tooling has its own licenses.
+Runtime dependencies remain separately licensed packages; CFUI does not relicense them. Radix UI, React, react-is, Phosphor Icons, TanStack Table, clsx, cmdk, date-fns, Embla Carousel, input-otp, React Day Picker, React Hook Form, React Resizable Panels, Recharts, Sonner, and tailwind-merge use MIT licenses. class-variance-authority uses Apache License 2.0. Refer to each installed dependency for its full license and copyright notice. Development tooling has its own licenses.

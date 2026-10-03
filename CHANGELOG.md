@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Declare the chart runtime dependency `react-is` explicitly so root imports work after Yarn Classic GitHub installs.
+
 Release tags identify installable GitHub versions. CFUI is currently a `0.x` library; public APIs may change between minor releases.
 
 ## 0.1.0
