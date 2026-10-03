@@ -1,0 +1,52 @@
+.cfui-scroll-area {
+  position: relative;
+  overflow: hidden;
+}
+
+.cfui-scroll-area-viewport {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.cfui-scroll-area-scrollbar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  padding: 1px;
+  transition: background-color 150ms ease;
+}
+
+.cfui-scroll-area-scrollbar-vertical,
+.cfui-scroll-area-scrollbar[data-orientation="vertical"] {
+  height: 100%;
+  width: 10px;
+  border-left: 1px solid transparent;
+}
+
+.cfui-scroll-area-scrollbar-horizontal,
+.cfui-scroll-area-scrollbar[data-orientation="horizontal"] {
+  height: 10px;
+  flex-direction: column;
+  border-top: 1px solid transparent;
+}
+
+.cfui-scroll-area-thumb {
+  position: relative;
+  flex: 1;
+  border-radius: 9999px;
+  background-color: var(--cfui-line);
+  transition: background-color 150ms ease;
+}
+
+.cfui-scroll-area-thumb:hover {
+  background-color: var(--cfui-hairline);
+}
+
+.cfui-scroll-area-scrollbar:hover .cfui-scroll-area-thumb {
+  background-color: var(--cfui-text-placeholder);
+}
+
+.cfui-scroll-area-corner {
+  background-color: var(--cfui-recessed);
+}

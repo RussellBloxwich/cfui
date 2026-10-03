@@ -1,0 +1,102 @@
+/* Cloudflare UI (CFUI) - Popover Component Styles */
+
+.cfui-popover-content {
+  position: relative;
+  z-index: 50;
+  width: 288px;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-base, #ffffff);
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  padding: 16px;
+  box-shadow: 0 4px 16px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.08)),
+              0 0 0 1px var(--cfui-shadow-edge, oklch(0% 0 0 / 0.12));
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+}
+
+.cfui-popover-content[data-state="open"] {
+  animation: cfui-popover-fade-in 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cfui-popover-content[data-state="closed"] {
+  animation: cfui-popover-fade-out 100ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cfui-popover-content[data-side="top"] {
+  animation-name: cfui-popover-slide-from-bottom;
+}
+
+.cfui-popover-content[data-side="bottom"] {
+  animation-name: cfui-popover-slide-from-top;
+}
+
+.cfui-popover-content[data-side="left"] {
+  animation-name: cfui-popover-slide-from-right;
+}
+
+.cfui-popover-content[data-side="right"] {
+  animation-name: cfui-popover-slide-from-left;
+}
+
+/* Close button inside popover (if present) */
+.cfui-popover-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--cfui-radius-sm, 4px);
+  border: none;
+  background: transparent;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  cursor: pointer;
+  padding: 0;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.cfui-popover-close:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-popover-close:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--cfui-focus, oklch(15% 0 0));
+}
+
+/* Animations */
+@keyframes cfui-popover-fade-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cfui-popover-fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+
+@keyframes cfui-popover-slide-from-top {
+  from { opacity: 0; transform: translateY(-4px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cfui-popover-slide-from-bottom {
+  from { opacity: 0; transform: translateY(4px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cfui-popover-slide-from-left {
+  from { opacity: 0; transform: translateX(-4px) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes cfui-popover-slide-from-right {
+  from { opacity: 0; transform: translateX(4px) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}

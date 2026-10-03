@@ -1,0 +1,131 @@
+/* toolbar.css - Cloudflare UI Toolbar styling */
+
+.cfui-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  min-height: 36px;
+  background-color: var(--cfui-base, #ffffff);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  border-radius: var(--cfui-radius-lg, 8px);
+  box-sizing: border-box;
+}
+
+.cfui-toolbar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 8px;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 500;
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--cfui-radius-md, 6px);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+  box-sizing: border-box;
+}
+
+.cfui-toolbar-button:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-toolbar-button:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 1px;
+}
+
+.cfui-toolbar-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cfui-toolbar-separator {
+  width: 1px;
+  height: 18px;
+  background-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.cfui-toolbar-separator[data-orientation="horizontal"] {
+  width: 100%;
+  height: 1px;
+  margin: 4px 0;
+}
+
+.cfui-toolbar-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  color: var(--cfui-link, oklch(42.4% 0.199 265.638));
+  text-decoration: none;
+  padding: 0 6px;
+  border-radius: var(--cfui-radius-sm, 4px);
+  outline: none;
+}
+
+.cfui-toolbar-link:hover {
+  text-decoration: underline;
+}
+
+.cfui-toolbar-link:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 1px;
+}
+
+.cfui-toolbar-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.cfui-toolbar-toggle-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  min-width: 28px;
+  padding: 0 8px;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 500;
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--cfui-radius-md, 6px);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  box-sizing: border-box;
+}
+
+.cfui-toolbar-toggle-item:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-toolbar-toggle-item:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 1px;
+}
+
+.cfui-toolbar-toggle-item[data-state="on"] {
+  background-color: var(--cfui-fill, oklch(92.2% 0 0));
+  border-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-toolbar-toggle-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

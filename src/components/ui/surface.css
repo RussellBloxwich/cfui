@@ -1,0 +1,91 @@
+.cfui-surface {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--cfui-radius-lg, 8px);
+  font-family: var(--cfui-font-sans, system-ui, sans-serif);
+  box-sizing: border-box;
+}
+
+.cfui-surface--bordered {
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+}
+
+.cfui-surface--base {
+  background-color: var(--cfui-base, #fff);
+  box-shadow: 0 1px 2px 0 var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-surface--elevated {
+  background-color: var(--cfui-elevated, oklch(98% 0 0));
+  box-shadow: 0 4px 6px -1px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.08)), 0 2px 4px -2px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.04));
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-surface--recessed {
+  background-color: var(--cfui-recessed, oklch(96% 0 0));
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-surface--canvas {
+  background-color: var(--cfui-canvas, oklch(98.75% 0 0));
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-surface--overlay {
+  background-color: var(--cfui-overlay, oklch(97.5% 0 0));
+  box-shadow: 0 10px 15px -3px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1)), 0 4px 6px -4px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-surface--interactive {
+  background-color: var(--cfui-base, #fff);
+  box-shadow: 0 1px 2px 0 var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+  color: var(--cfui-text, oklch(20.5% 0 none));
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cfui-surface--interactive:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  border-color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+}
+
+.cfui-surface-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 20px 12px 20px;
+}
+
+.cfui-surface-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-surface-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-surface-content {
+  padding: 0 20px 20px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cfui-surface-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  padding: 16px 20px;
+}

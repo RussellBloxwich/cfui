@@ -1,0 +1,19 @@
+.cfui-separator {
+  box-sizing: border-box;
+  background-color: var(--cfui-line, rgba(0, 0, 0, 0.1));
+  flex-shrink: 0;
+  border: none;
+  margin: 0;
+}
+
+.cfui-separator--horizontal,
+.cfui-separator[data-orientation="horizontal"] {
+  height: 1px;
+  width: 100%;
+}
+
+.cfui-separator--vertical,
+.cfui-separator[data-orientation="vertical"] {
+  height: 100%;
+  width: 1px;
+}

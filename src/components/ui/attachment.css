@@ -1,0 +1,358 @@
+/* attachment.css - Cloudflare UI Attachment Module */
+
+.cfui-attachment {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: var(--cfui-base, #ffffff);
+  border: 1px solid var(--cfui-line, rgba(0, 0, 0, 0.1));
+  border-radius: var(--cfui-radius-lg, 8px);
+  padding: 8px 12px;
+  gap: 10px;
+  max-width: 100%;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  color: var(--cfui-text, #313131);
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+}
+
+.cfui-attachment:hover {
+  background-color: var(--cfui-tint, #f5f5f5);
+}
+
+.cfui-attachment:focus-within {
+  border-color: var(--cfui-focus, #151515);
+  box-shadow: 0 0 0 1px var(--cfui-focus, #151515);
+}
+
+/* Sizes */
+.cfui-attachment--default {
+  min-height: 48px;
+  padding: 8px 12px;
+  gap: 12px;
+}
+
+.cfui-attachment--sm {
+  min-height: 38px;
+  padding: 6px 10px;
+  gap: 8px;
+}
+
+.cfui-attachment--xs {
+  min-height: 28px;
+  padding: 4px 8px;
+  gap: 6px;
+}
+
+/* Orientations */
+.cfui-attachment--horizontal {
+  flex-direction: row;
+}
+
+.cfui-attachment--vertical {
+  flex-direction: column;
+  align-items: stretch;
+  width: 180px;
+  padding: 12px;
+}
+
+/* States */
+.cfui-attachment--uploading {
+  border-color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+  background-color: var(--cfui-elevated, #fafafa);
+}
+
+.cfui-attachment--processing {
+  border-color: var(--cfui-info, #2f69ff);
+  opacity: 0.9;
+}
+
+.cfui-attachment--error {
+  border-color: var(--cfui-danger, #e03131);
+  background-color: var(--cfui-danger-tint, rgba(224, 49, 49, 0.05));
+}
+
+.cfui-attachment--disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* AttachmentTrigger: full-card interactive layer */
+.cfui-attachment-trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: inherit;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cfui-attachment-trigger:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: -2px;
+}
+
+.cfui-attachment-trigger--disabled,
+.cfui-attachment-trigger[aria-disabled="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Media */
+.cfui-attachment-media {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--cfui-radius-md, 6px);
+  background-color: var(--cfui-fill, #f0f0f0);
+  color: var(--cfui-text-muted, #767676);
+  overflow: hidden;
+}
+
+.cfui-attachment--default .cfui-attachment-media {
+  width: 36px;
+  height: 36px;
+}
+
+.cfui-attachment--sm .cfui-attachment-media {
+  width: 28px;
+  height: 28px;
+}
+
+.cfui-attachment--xs .cfui-attachment-media {
+  width: 20px;
+  height: 20px;
+}
+
+.cfui-attachment--vertical .cfui-attachment-media {
+  width: 100%;
+  height: 110px;
+}
+
+.cfui-attachment-media--image {
+  background-color: var(--cfui-recessed, #e6e6e6);
+}
+
+.cfui-attachment-media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.cfui-attachment-content {
+  position: relative;
+  z-index: 0;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cfui-attachment-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+}
+
+.cfui-attachment-title {
+  margin: 0;
+  font-size: var(--cfui-text-size, 13px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--cfui-text-strong, #151515);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cfui-attachment--xs .cfui-attachment-title {
+  font-size: 12px;
+}
+
+.cfui-attachment-description {
+  margin: 0;
+  font-size: var(--cfui-small-text-size, 12px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--cfui-text-muted, #767676);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cfui-attachment--xs .cfui-attachment-description {
+  font-size: 11px;
+}
+
+/* Progress track in title */
+.cfui-attachment-progress-track {
+  width: 100%;
+  height: 3px;
+  background-color: var(--cfui-fill, #e6e6e6);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+.cfui-attachment-progress-bar {
+  height: 100%;
+  background-color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+  transition: width 0.2s ease-in-out;
+}
+
+/* Actions */
+.cfui-attachment-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.cfui-attachment-action {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cfui-radius-md, 6px);
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--cfui-text-muted, #767676);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  padding: 0 6px;
+  font-size: 12px;
+  height: 24px;
+  text-decoration: none;
+}
+
+.cfui-attachment-action:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--cfui-fill, #ebebeb);
+  color: var(--cfui-text-strong, #151515);
+}
+
+.cfui-attachment-action:focus-visible {
+  outline: 2px solid var(--cfui-focus, #151515);
+  outline-offset: 1px;
+}
+
+.cfui-attachment-action--destructive:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--cfui-danger-tint, rgba(224, 49, 49, 0.1));
+  color: var(--cfui-danger, #e03131);
+}
+
+.cfui-attachment-action--link {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--cfui-link, oklch(42.4% 0.199 265.638));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cfui-attachment-action--link:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: transparent;
+  color: var(--cfui-brand-hover, oklch(48.8% 0.243 264.376));
+}
+
+.cfui-attachment-action--icon {
+  width: 24px;
+  padding: 0;
+}
+
+.cfui-attachment-action--icon-sm {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  padding: 0;
+}
+
+.cfui-attachment-action--icon-lg {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0;
+}
+
+.cfui-attachment-action--xs {
+  height: 20px;
+  min-width: 20px;
+  padding: 0 4px;
+  font-size: 11px;
+}
+
+.cfui-attachment-action--sm {
+  height: 26px;
+  min-width: 26px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.cfui-attachment-action--default {
+  height: 32px;
+  min-width: 32px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.cfui-attachment-action--lg {
+  height: 40px;
+  min-width: 40px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.cfui-attachment-action--loading,
+.cfui-attachment-action[data-loading="true"] {
+  opacity: 0.7;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.cfui-attachment-action--disabled,
+.cfui-attachment-action:disabled,
+.cfui-attachment-action[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* AttachmentGroup: horizontal scroll row with reachable off-screen items */
+.cfui-attachment-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 4px 2px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cfui-attachment-group:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 2px;
+  border-radius: var(--cfui-radius-lg, 8px);
+}

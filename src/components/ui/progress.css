@@ -1,0 +1,62 @@
+.cfui-progress {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 9999px;
+  background-color: var(--cfui-fill, #e5e7eb);
+  display: block;
+}
+
+.cfui-progress--sm {
+  height: 4px;
+}
+
+.cfui-progress--md {
+  height: 8px;
+}
+
+.cfui-progress--lg {
+  height: 12px;
+}
+
+.cfui-progress-indicator {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+  border-radius: 9999px;
+  background-color: var(--cfui-brand, #0051c3);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cfui-progress--default .cfui-progress-indicator,
+.cfui-progress--brand .cfui-progress-indicator {
+  background-color: var(--cfui-brand, #0051c3);
+}
+
+.cfui-progress--success .cfui-progress-indicator {
+  background-color: var(--cfui-success, #059669);
+}
+
+.cfui-progress--warning .cfui-progress-indicator {
+  background-color: var(--cfui-warning, #d97706);
+}
+
+.cfui-progress--danger .cfui-progress-indicator {
+  background-color: var(--cfui-danger, #dc2626);
+}
+
+.cfui-progress--indeterminate .cfui-progress-indicator {
+  width: 40%;
+  animation: cfui-progress-indeterminate 1.4s infinite ease-in-out;
+}
+
+@keyframes cfui-progress-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}

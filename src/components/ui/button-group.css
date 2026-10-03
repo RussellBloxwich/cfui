@@ -1,0 +1,101 @@
+/* Cloudflare CFUI Button Group styles */
+
+.cfui-button-group {
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Horizontal attached */
+.cfui-button-group--horizontal.cfui-button-group--attached {
+  flex-direction: row;
+}
+
+.cfui-button-group--horizontal.cfui-button-group--attached > .cfui-button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.cfui-button-group--horizontal.cfui-button-group--attached > .cfui-button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Vertical attached */
+.cfui-button-group--vertical.cfui-button-group--attached {
+  flex-direction: column;
+}
+
+.cfui-button-group--vertical.cfui-button-group--attached > .cfui-button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -1px;
+}
+
+.cfui-button-group--vertical.cfui-button-group--attached > .cfui-button:not(:last-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Unattached spacing */
+.cfui-button-group--horizontal:not(.cfui-button-group--attached) {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.cfui-button-group--vertical:not(.cfui-button-group--attached) {
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ButtonGroupSeparator */
+.cfui-button-group__separator,
+.cfui-button-group-separator {
+  background-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  flex-shrink: 0;
+}
+
+.cfui-button-group--horizontal > .cfui-button-group__separator,
+.cfui-button-group--horizontal > .cfui-button-group-separator,
+.cfui-button-group__separator--horizontal {
+  width: 1px;
+  height: auto;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+.cfui-button-group--vertical > .cfui-button-group__separator,
+.cfui-button-group--vertical > .cfui-button-group-separator,
+.cfui-button-group__separator--vertical {
+  height: 1px;
+  width: auto;
+  align-self: stretch;
+  margin: 0 4px;
+}
+
+/* ButtonGroupText */
+.cfui-button-group__text,
+.cfui-button-group-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--cfui-text-size, 14px);
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  white-space: nowrap;
+}
+
+/* Stacking context for hover/focus */
+.cfui-button-group > .cfui-button:hover {
+  z-index: 1;
+}
+
+.cfui-button-group > .cfui-button:focus-visible {
+  z-index: 2;
+}
+
+.cfui-button-group > .cfui-button:active {
+  z-index: 2;
+}

@@ -1,0 +1,85 @@
+.cfui-meter {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--cfui-font-sans, system-ui, sans-serif);
+  box-sizing: border-box;
+}
+
+.cfui-meter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.cfui-meter-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-meter-value {
+  font-family: var(--cfui-font-mono, monospace);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-meter-track {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 9999px;
+  background-color: var(--cfui-fill, oklch(92.2% 0 0));
+  box-sizing: border-box;
+}
+
+.cfui-meter-track--sm {
+  height: 4px;
+}
+
+.cfui-meter-track--md {
+  height: 8px;
+}
+
+.cfui-meter-track--lg {
+  height: 12px;
+}
+
+.cfui-meter-indicator {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease-in-out;
+}
+
+.cfui-meter-indicator--default,
+.cfui-meter-indicator--brand {
+  background-color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+}
+
+.cfui-meter-indicator--success {
+  background-color: var(--cfui-success, oklch(59.6% 0.145 163.225));
+}
+
+.cfui-meter-indicator--warning {
+  background-color: var(--cfui-warning, oklch(73.9% 0.177 58.2));
+}
+
+.cfui-meter-indicator--danger {
+  background-color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+}
+
+.cfui-meter-native-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

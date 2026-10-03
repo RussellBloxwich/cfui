@@ -1,0 +1,87 @@
+.cfui-spinner {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.cfui-spinner-svg {
+  animation: cfui-spin 0.8s linear infinite;
+  display: block;
+}
+
+.cfui-spinner-track {
+  opacity: 0.2;
+}
+
+.cfui-spinner-indicator {
+  opacity: 1;
+  stroke-linecap: round;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 60;
+}
+
+.cfui-spinner--xs {
+  width: 12px;
+  height: 12px;
+}
+
+.cfui-spinner--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.cfui-spinner--md {
+  width: 20px;
+  height: 20px;
+}
+
+.cfui-spinner--lg {
+  width: 24px;
+  height: 24px;
+}
+
+.cfui-spinner--xl {
+  width: 32px;
+  height: 32px;
+}
+
+.cfui-spinner--default {
+  color: var(--cfui-text-muted, #6b7280);
+}
+
+.cfui-spinner--brand {
+  color: var(--cfui-brand, #0051c3);
+}
+
+.cfui-spinner--contrast {
+  color: var(--cfui-contrast, #111827);
+}
+
+.cfui-spinner--current {
+  color: currentColor;
+}
+
+.cfui-spinner-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@keyframes cfui-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

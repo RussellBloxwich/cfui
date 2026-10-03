@@ -1,0 +1,52 @@
+/* Cloudflare CFUI Toggle Group styles */
+
+.cfui-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cfui-toggle-group--horizontal {
+  flex-direction: row;
+}
+
+.cfui-toggle-group--vertical {
+  flex-direction: column;
+}
+
+/* Attached styling */
+.cfui-toggle-group--horizontal > .cfui-toggle-group-item:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.cfui-toggle-group--horizontal > .cfui-toggle-group-item:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cfui-toggle-group--vertical > .cfui-toggle-group-item:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -1px;
+}
+
+.cfui-toggle-group--vertical > .cfui-toggle-group-item:not(:last-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Stacking */
+.cfui-toggle-group > .cfui-toggle-group-item:hover {
+  z-index: 1;
+}
+
+.cfui-toggle-group > .cfui-toggle-group-item[data-state="on"] {
+  z-index: 2;
+}
+
+.cfui-toggle-group > .cfui-toggle-group-item:focus-visible {
+  z-index: 3;
+}

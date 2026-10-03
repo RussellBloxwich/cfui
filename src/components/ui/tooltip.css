@@ -1,0 +1,79 @@
+/* Cloudflare UI (CFUI) - Tooltip Component Styles */
+
+.cfui-tooltip-content {
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+  border-radius: var(--cfui-radius-md, 6px);
+  background-color: var(--cfui-contrast, oklch(8.5% 0 0));
+  color: var(--cfui-base, #ffffff);
+  padding: 4px 8px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  user-select: none;
+  max-width: 280px;
+}
+
+.cfui-tooltip-content[data-state="delayed-open"],
+.cfui-tooltip-content[data-state="instant-open"] {
+  animation: cfui-tooltip-fade-in 100ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cfui-tooltip-content[data-state="closed"] {
+  animation: cfui-tooltip-fade-out 75ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cfui-tooltip-content[data-side="top"] {
+  animation-name: cfui-tooltip-slide-from-bottom;
+}
+
+.cfui-tooltip-content[data-side="bottom"] {
+  animation-name: cfui-tooltip-slide-from-top;
+}
+
+.cfui-tooltip-content[data-side="left"] {
+  animation-name: cfui-tooltip-slide-from-right;
+}
+
+.cfui-tooltip-content[data-side="right"] {
+  animation-name: cfui-tooltip-slide-from-left;
+}
+
+/* Tooltip Arrow */
+.cfui-tooltip-arrow {
+  fill: var(--cfui-contrast, oklch(8.5% 0 0));
+}
+
+/* Animations */
+@keyframes cfui-tooltip-fade-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cfui-tooltip-fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+
+@keyframes cfui-tooltip-slide-from-top {
+  from { opacity: 0; transform: translateY(-3px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cfui-tooltip-slide-from-bottom {
+  from { opacity: 0; transform: translateY(3px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cfui-tooltip-slide-from-left {
+  from { opacity: 0; transform: translateX(-3px) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes cfui-tooltip-slide-from-right {
+  from { opacity: 0; transform: translateX(3px) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}

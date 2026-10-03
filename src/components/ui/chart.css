@@ -1,0 +1,208 @@
+/* Scoped chart styles for CFUI */
+
+.cfui-chart {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  justify-content: center;
+  font-size: 12px;
+  width: 100%;
+  position: relative;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+}
+
+/* Recharts internal SVG element styling */
+.cfui-chart .recharts-cartesian-axis-tick text {
+  fill: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+  font-size: 12px;
+}
+
+.cfui-chart .recharts-cartesian-grid line {
+  stroke: var(--cfui-line, var(--color-kumo-line, rgba(0, 0, 0, 0.1)));
+}
+
+.cfui-chart .recharts-curve.recharts-tooltip-cursor {
+  stroke: var(--cfui-line, var(--color-kumo-line, rgba(0, 0, 0, 0.1)));
+}
+
+.cfui-chart .recharts-dot[stroke="#fff"] {
+  stroke: transparent;
+}
+
+.cfui-chart .recharts-layer {
+  outline: none;
+}
+
+.cfui-chart .recharts-polar-grid [stroke="#ccc"] {
+  stroke: var(--cfui-line, var(--color-kumo-line, rgba(0, 0, 0, 0.1)));
+}
+
+.cfui-chart .recharts-radial-bar-background-sector {
+  fill: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5));
+}
+
+.cfui-chart .recharts-rectangle.recharts-tooltip-cursor {
+  fill: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5));
+}
+
+.cfui-chart .recharts-reference-line [stroke="#ccc"] {
+  stroke: var(--cfui-line, var(--color-kumo-line, rgba(0, 0, 0, 0.1)));
+}
+
+.cfui-chart .recharts-sector[stroke="#fff"] {
+  stroke: transparent;
+}
+
+.cfui-chart .recharts-sector {
+  outline: none;
+}
+
+.cfui-chart .recharts-surface {
+  outline: none;
+}
+
+/* Tooltip container */
+.cfui-chart-tooltip {
+  display: grid;
+  min-width: 8rem;
+  align-items: start;
+  gap: 6px;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-base, var(--color-kumo-base, #ffffff));
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  padding: 6px 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 6px -1px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1)),
+    0 2px 4px -2px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1));
+}
+
+.cfui-chart-tooltip-label {
+  font-weight: 500;
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+}
+
+.cfui-chart-tooltip-grid {
+  display: grid;
+  gap: 6px;
+}
+
+.cfui-chart-tooltip-entry {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.cfui-chart-tooltip-entry-dot {
+  align-items: center;
+}
+
+.cfui-chart-tooltip-entry svg {
+  height: 10px;
+  width: 10px;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+}
+
+.cfui-chart-tooltip-indicator {
+  flex-shrink: 0;
+  border-radius: 2px;
+  border-color: var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.cfui-chart-tooltip-indicator-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.cfui-chart-tooltip-indicator-line {
+  width: 4px;
+}
+
+.cfui-chart-tooltip-indicator-dashed {
+  width: 0;
+  border-width: 1.5px;
+  border-style: dashed;
+  background-color: transparent;
+}
+
+.cfui-chart-tooltip-indicator-nested {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.cfui-chart-tooltip-values {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.cfui-chart-tooltip-values-centered {
+  align-items: center;
+}
+
+.cfui-chart-tooltip-values-nested {
+  align-items: flex-end;
+}
+
+.cfui-chart-tooltip-name-wrapper {
+  display: grid;
+  gap: 6px;
+}
+
+.cfui-chart-tooltip-name {
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+}
+
+.cfui-chart-tooltip-value {
+  font-family: var(--cfui-font-mono, monospace);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  margin-left: 8px;
+}
+
+/* Legend */
+.cfui-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+}
+
+.cfui-chart-legend-top {
+  padding-bottom: 12px;
+}
+
+.cfui-chart-legend-bottom {
+  padding-top: 12px;
+}
+
+.cfui-chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cfui-chart-legend-item svg {
+  height: 12px;
+  width: 12px;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+}
+
+.cfui-chart-legend-indicator {
+  height: 8px;
+  width: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.cfui-chart-legend-label {
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  font-weight: 400;
+}

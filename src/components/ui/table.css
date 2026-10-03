@@ -1,0 +1,104 @@
+.cfui-table-container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+
+.cfui-table {
+  width: 100%;
+  caption-side: bottom;
+  font-size: var(--cfui-text-size, 14px);
+  font-family: var(--cfui-font-sans, system-ui, sans-serif);
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.cfui-table-header {
+  border-bottom: 1px solid var(--cfui-line);
+}
+
+.cfui-table-header .cfui-table-row {
+  border-bottom: 1px solid var(--cfui-line);
+}
+
+.cfui-table-body .cfui-table-row:last-child {
+  border-bottom: 0;
+}
+
+.cfui-table-footer {
+  border-top: 1px solid var(--cfui-line);
+  background-color: var(--cfui-recessed);
+  font-weight: 500;
+  color: var(--cfui-text);
+}
+
+.cfui-table-footer .cfui-table-row:last-child {
+  border-bottom: 0;
+}
+
+.cfui-table-row {
+  border-bottom: 1px solid var(--cfui-line);
+  transition: background-color 150ms ease;
+}
+
+.cfui-table-row:hover {
+  background-color: var(--cfui-tint);
+}
+
+.cfui-table-row[data-state="selected"] {
+  background-color: var(--cfui-tint);
+}
+
+.cfui-table-head {
+  height: 48px;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--cfui-text);
+  border-bottom: 1px solid var(--cfui-line);
+  position: relative;
+  user-select: none;
+  transition: background-color 150ms ease;
+}
+
+.cfui-table-head:first-child {
+  padding-left: 16px;
+}
+
+.cfui-table-head:hover {
+  background-color: var(--cfui-fill);
+}
+
+.cfui-table-head:has([role="checkbox"]) {
+  padding-right: 0;
+  width: 40px;
+}
+
+.cfui-table-cell {
+  height: 48px;
+  padding: 6px 12px;
+  vertical-align: middle;
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--cfui-text);
+  border-bottom: 1px solid var(--cfui-line);
+}
+
+.cfui-table-cell:first-child {
+  padding-left: 16px;
+}
+
+.cfui-table-cell:has([role="checkbox"]) {
+  padding-right: 0;
+  width: 40px;
+}
+
+.cfui-table-caption {
+  margin-top: 16px;
+  font-size: var(--cfui-small-text-size, 12px);
+  color: var(--cfui-text-muted);
+}

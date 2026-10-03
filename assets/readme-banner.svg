@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">CFUI — Cloudflare's design language, shadcn-style React components</title>
+  <desc id="desc">CFUI wordmark beside a miniature dashboard with blue controls, neutral cards, a usage chart, and an application table.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="560" gradientUnits="userSpaceOnUse"><stop stop-color="#F8F9FB"/><stop offset="1" stop-color="#EEF3FA"/></linearGradient>
+    <linearGradient id="chart" x1="0" y1="244" x2="0" y2="323" gradientUnits="userSpaceOnUse"><stop stop-color="#2563EB" stop-opacity=".2"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/></linearGradient>
+    <filter id="shadow" x="540" y="40" width="740" height="530" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#182E53" flood-opacity=".09"/></filter>
+  </defs>
+  <rect width="1280" height="560" rx="20" fill="url(#bg)"/>
+  <g stroke="#DCE3ED" stroke-opacity=".5"><path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280"/><path d="M80 0V560M160 0V560M240 0V560M320 0V560M400 0V560M480 0V560M560 0V560M640 0V560M720 0V560M800 0V560M880 0V560M960 0V560M1040 0V560M1120 0V560M1200 0V560"/></g>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <rect x="64" y="84" width="36" height="6" rx="3" fill="#F6821F"/>
+    <text x="62" y="202" fill="#171717" font-size="100" font-weight="750" letter-spacing="-6">CFUI</text>
+    <text x="66" y="268" fill="#292D33" font-size="27" font-weight="600" letter-spacing="-.6">Cloudflare's design language.</text>
+    <text x="66" y="311" fill="#58616D" font-size="25" letter-spacing="-.5">shadcn-style React components.</text>
+    <g font-size="15" font-weight="600" fill="#44546B">
+      <rect x="66" y="353" width="84" height="32" rx="16" fill="white" stroke="#D6DEE9"/><text x="88" y="374">React</text>
+      <rect x="160" y="353" width="84" height="32" rx="16" fill="white" stroke="#D6DEE9"/><text x="182" y="374">Radix</text>
+      <rect x="254" y="353" width="112" height="32" rx="16" fill="white" stroke="#D6DEE9"/><text x="273" y="374">Plain CSS</text>
+    </g>
+    <text x="66" y="455" fill="#748091" font-size="15">83 modules · Open source · GitHub install</text>
+    <g filter="url(#shadow)">
+      <rect x="588" y="72" width="628" height="416" rx="12" fill="white" stroke="#D3DAE4"/>
+      <path d="M589 122H1215" stroke="#E3E7ED"/>
+      <rect x="606" y="88" width="24" height="24" rx="6" fill="#F0F4FA"/>
+      <path d="M613 94L608 100L613 106M623 94L628 100L623 106" stroke="#3668B2" stroke-width="1.6"/>
+      <text x="641" y="105" fill="#2B3038" font-size="15" font-weight="600">Workspace</text>
+      <text x="916" y="103" fill="#68717E" font-size="12">Overview</text><text x="997" y="103" fill="#0055DC" font-size="12" font-weight="600">Applications</text>
+      <circle cx="1183" cy="100" r="12" fill="#EAF0FA"/><text x="1179" y="104" fill="#48617F" font-size="11" font-weight="600">R</text>
+      <text x="612" y="157" fill="#20242B" font-size="21" font-weight="650">Applications</text>
+      <rect x="1082" y="137" width="110" height="30" rx="7" fill="#0055DC"/>
+      <text x="1098" y="157" fill="white" font-size="12" font-weight="600">+ Create app</text>
+      <rect x="612" y="190" width="276" height="140" rx="9" stroke="#DEE3EA"/>
+      <text x="628" y="216" fill="#68717E" font-size="12">Requests</text><text x="628" y="249" fill="#20242B" font-size="27" font-weight="650">1.24M</text>
+      <text x="816" y="244" fill="#238344" font-size="11" font-weight="600">↗ 18.2%</text>
+      <path d="M628 305L648 298L669 301L690 280L711 286L732 273L754 279L775 260L797 270L819 255L842 258L871 239V317H628Z" fill="url(#chart)"/>
+      <path d="M628 305L648 298L669 301L690 280L711 286L732 273L754 279L775 260L797 270L819 255L842 258L871 239" stroke="#0055DC" stroke-width="2" stroke-linejoin="round"/>
+      <rect x="902" y="190" width="290" height="140" rx="9" stroke="#DEE3EA"/>
+      <text x="918" y="216" fill="#68717E" font-size="12">Deployment status</text><text x="918" y="248" fill="#20242B" font-size="19" font-weight="600">All systems operational</text>
+      <rect x="918" y="273" width="104" height="24" rx="6" fill="#ECF7EF" stroke="#CAE9D3"/><circle cx="931" cy="285" r="3" fill="#22863A"/><text x="941" y="289" fill="#25743D" font-size="11" font-weight="600">Production</text>
+      <rect x="1133" y="279" width="40" height="22" rx="11" fill="#0055DC"/><circle cx="1162" cy="290" r="8" fill="white"/>
+      <rect x="612" y="350" width="580" height="114" rx="8" stroke="#DEE3EA"/><path d="M613 385H1191M613 425H1191" stroke="#E6E9EE"/>
+      <text x="628" y="373" fill="#6A7381" font-size="11" font-weight="600">APPLICATION</text><text x="905" y="373" fill="#6A7381" font-size="11" font-weight="600">STATUS</text><text x="1088" y="373" fill="#6A7381" font-size="11" font-weight="600">UPDATED</text>
+      <text x="628" y="410" fill="#0055DC" font-size="13" font-weight="600">storefront</text><circle cx="909" cy="406" r="3" fill="#249044"/><text x="919" y="410" fill="#536170" font-size="12">Healthy</text><text x="1090" y="410" fill="#68717E" font-size="12">2 min ago</text>
+      <text x="628" y="450" fill="#0055DC" font-size="13" font-weight="600">api-gateway</text><circle cx="909" cy="446" r="3" fill="#249044"/><text x="919" y="450" fill="#536170" font-size="12">Healthy</text><text x="1090" y="450" fill="#68717E" font-size="12">12 min ago</text>
+    </g>
+  </g>
+</svg>

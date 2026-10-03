@@ -1,0 +1,71 @@
+/* breadcrumb.css - Cloudflare UI Breadcrumb styling */
+
+.cfui-breadcrumb {
+  display: flex;
+}
+
+.cfui-breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  line-height: 1.5;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  word-break: break-word;
+}
+
+.cfui-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cfui-breadcrumb-link {
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  text-decoration: none;
+  border-radius: var(--cfui-radius-sm, 4px);
+  transition: color 150ms ease;
+  outline: none;
+}
+
+.cfui-breadcrumb-link:hover {
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-breadcrumb-link:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 2px;
+}
+
+.cfui-breadcrumb-page {
+  font-weight: 500;
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  cursor: default;
+}
+
+.cfui-breadcrumb-separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cfui-text-placeholder, oklch(70.8% 0 0));
+}
+
+.cfui-breadcrumb-separator-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.cfui-breadcrumb-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}

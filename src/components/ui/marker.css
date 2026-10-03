@@ -1,0 +1,76 @@
+/* marker.css - Cloudflare UI Marker Module */
+
+.cfui-marker {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--cfui-small-text-size, 12px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--cfui-text-muted, #767676);
+  user-select: none;
+}
+
+/* Variant: default (subtle pill) */
+.cfui-marker--default {
+  background-color: var(--cfui-fill, #f0f0f0);
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 3px 8px;
+}
+
+/* Variant: border (outlined pill) */
+.cfui-marker--border {
+  background-color: var(--cfui-base, #ffffff);
+  border: 1px solid var(--cfui-line, rgba(0, 0, 0, 0.15));
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 4px 10px;
+}
+
+/* Variant: separator (horizontal divider with centered marker content) */
+.cfui-marker--separator {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.cfui-marker--separator::before,
+.cfui-marker--separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--cfui-line, rgba(0, 0, 0, 0.1));
+}
+
+.cfui-marker--separator:not(:empty)::before {
+  margin-right: 12px;
+}
+
+.cfui-marker--separator:not(:empty)::after {
+  margin-left: 12px;
+}
+
+/* MarkerIcon */
+.cfui-marker-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* MarkerContent */
+.cfui-marker-content {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}

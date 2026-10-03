@@ -1,0 +1,110 @@
+/* accordion.css - Cloudflare UI Accordion styling */
+
+.cfui-accordion {
+  width: 100%;
+}
+
+.cfui-accordion-item {
+  border-bottom: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+}
+
+.cfui-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.cfui-accordion-header {
+  display: flex;
+  margin: 0;
+}
+
+.cfui-accordion-trigger {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  background: transparent;
+  border: 0;
+  border-radius: var(--cfui-radius-sm, 4px);
+  text-align: left;
+  cursor: pointer;
+  transition: color 150ms ease, opacity 150ms ease;
+  outline: none;
+}
+
+.cfui-accordion-trigger:hover {
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-accordion-trigger:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 2px;
+}
+
+.cfui-accordion-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cfui-accordion-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  transition: transform 200ms cubic-bezier(0.87, 0, 0.13, 1), color 150ms ease;
+}
+
+.cfui-accordion-trigger:hover .cfui-accordion-chevron {
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+}
+
+.cfui-accordion-trigger[data-state="open"] .cfui-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.cfui-accordion-content {
+  overflow: hidden;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  line-height: 1.5;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-accordion-content[data-state="closed"] {
+  animation: cfui-accordion-up 200ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.cfui-accordion-content[data-state="open"] {
+  animation: cfui-accordion-down 200ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.cfui-accordion-content-inner {
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
+@keyframes cfui-accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes cfui-accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}

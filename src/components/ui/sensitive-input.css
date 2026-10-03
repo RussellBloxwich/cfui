@@ -1,0 +1,92 @@
+.cfui-sensitive-input-container {
+  position: relative;
+  display: flex;
+  height: 36px;
+  width: 100%;
+  align-items: center;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-control, #fff);
+  padding: 0 12px;
+  font-family: var(--cfui-font-sans, system-ui, sans-serif);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cfui-sensitive-input-container:focus-within {
+  border-color: transparent;
+  outline: 2px solid var(--cfui-focus, oklch(15% 0 0));
+  outline-offset: -1px;
+}
+
+.cfui-sensitive-input-container--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: var(--cfui-fill, oklch(92.2% 0 0));
+}
+
+.cfui-sensitive-input-field {
+  height: 100%;
+  min-width: 0;
+  flex: 1 1 0%;
+  border: none;
+  background: transparent;
+  padding: 4px 0;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+  outline: none;
+}
+
+.cfui-sensitive-input-field--masked {
+  letter-spacing: 0.2em;
+  font-family: var(--cfui-font-mono, monospace);
+}
+
+.cfui-sensitive-input-field::placeholder {
+  color: var(--cfui-text-placeholder, oklch(70.8% 0 0));
+}
+
+.cfui-sensitive-input-field:disabled {
+  cursor: not-allowed;
+}
+
+.cfui-sensitive-input-reveal,
+.cfui-sensitive-input-copy {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cfui-radius-sm, 4px);
+  border: none;
+  background: transparent;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  margin-left: 4px;
+  padding: 0;
+  outline: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cfui-sensitive-input-reveal:hover:not(:disabled),
+.cfui-sensitive-input-copy:hover:not(:disabled) {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-sensitive-input-reveal:focus-visible,
+.cfui-sensitive-input-copy:focus-visible {
+  outline: 2px solid var(--cfui-focus, oklch(15% 0 0));
+}
+
+.cfui-sensitive-input-reveal:disabled,
+.cfui-sensitive-input-copy:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cfui-sensitive-input-copy--copied {
+  color: var(--cfui-success, oklch(59.6% 0.145 163.225));
+}

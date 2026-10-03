@@ -1,0 +1,175 @@
+/* Scoped date range picker styles for CFUI */
+
+.cfui-date-range-picker {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.cfui-date-range-picker-trigger {
+  display: inline-flex;
+  height: var(--cfui-control-height, 36px);
+  min-height: 36px;
+  width: 100%;
+  min-width: 260px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  padding: 6px 12px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  user-select: none;
+  cursor: pointer;
+  background-color: var(--cfui-control, var(--color-kumo-control, #ffffff));
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 1px 2px 0 var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+}
+
+.cfui-date-range-picker-trigger:hover:not(:disabled) {
+  background-color: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5));
+}
+
+.cfui-date-range-picker-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--cfui-brand, var(--color-kumo-brand, #f6821f));
+}
+
+.cfui-date-range-picker-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--cfui-control, var(--color-kumo-control, #ffffff));
+}
+
+.cfui-date-range-picker-trigger-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cfui-date-range-picker-trigger-placeholder {
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+}
+
+.cfui-date-range-picker-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+}
+
+.cfui-date-range-picker-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.cfui-date-range-picker-clear-button {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cfui-radius-sm, 4px);
+  padding: 0;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.cfui-date-range-picker-clear-button:hover {
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  background-color: var(--cfui-fill, var(--color-kumo-fill, rgba(0, 0, 0, 0.06)));
+}
+
+.cfui-date-range-picker-clear-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.cfui-date-range-picker-caret {
+  width: 14px;
+  height: 14px;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+  transition: transform 200ms ease;
+}
+
+.cfui-date-range-picker-caret-open {
+  transform: rotate(180deg);
+}
+
+.cfui-date-range-picker-content {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-base, var(--color-kumo-base, #ffffff));
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  padding: 0;
+  box-shadow: 0 4px 6px -1px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1)),
+    0 2px 4px -2px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1));
+  outline: none;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .cfui-date-range-picker-content {
+    flex-direction: row;
+  }
+}
+
+.cfui-date-range-picker-presets {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+  gap: 4px;
+  min-width: 130px;
+  background-color: var(--cfui-recessed, var(--color-kumo-recessed, #fafafa));
+  border-bottom: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+}
+
+@media (min-width: 640px) {
+  .cfui-date-range-picker-presets {
+    flex-direction: column;
+    border-bottom: 0;
+    border-right: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  }
+}
+
+.cfui-date-range-picker-preset-button {
+  text-align: left;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: var(--cfui-radius-md, 6px);
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+  transition: background-color 150ms ease, color 150ms ease;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.cfui-date-range-picker-preset-button:hover {
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  background-color: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5));
+}
+
+.cfui-date-range-picker-preset-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--cfui-brand, var(--color-kumo-brand, #f6821f));
+}

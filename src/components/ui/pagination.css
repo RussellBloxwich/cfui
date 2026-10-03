@@ -1,0 +1,108 @@
+/* pagination.css - Cloudflare UI Pagination styling */
+
+.cfui-pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cfui-pagination-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cfui-pagination-item {
+  display: inline-flex;
+}
+
+.cfui-pagination-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 0 12px;
+  height: 36px;
+  min-width: 36px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  gap: 6px;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cfui-pagination-link:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-pagination-link:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 1px;
+}
+
+.cfui-pagination-link--active {
+  background-color: var(--cfui-base, #ffffff);
+  border-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  box-shadow: 0 1px 2px var(--cfui-shadow-drop, oklch(0% 0 0 / 0.08));
+}
+
+.cfui-pagination-link--sm {
+  height: 26px;
+  min-width: 26px;
+  padding: 0 8px;
+  font-size: var(--cfui-small-text-size, 12px);
+  border-radius: var(--cfui-radius-md, 6px);
+}
+
+.cfui-pagination-link--icon {
+  padding: 0;
+  width: 36px;
+  height: 36px;
+}
+
+.cfui-pagination-link--icon.cfui-pagination-link--sm {
+  width: 26px;
+  height: 26px;
+}
+
+.cfui-pagination-previous,
+.cfui-pagination-next {
+  gap: 6px;
+}
+
+.cfui-pagination-link[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cfui-pagination-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-pagination-ellipsis-icon {
+  width: 16px;
+  height: 16px;
+}

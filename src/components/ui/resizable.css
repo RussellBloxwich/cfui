@@ -1,0 +1,90 @@
+.cfui-resizable-group {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.cfui-resizable-group[data-orientation="vertical"],
+.cfui-resizable-group[data-group-orientation="vertical"],
+.cfui-resizable-group[data-panel-group-direction="vertical"],
+.cfui-resizable-group-vertical {
+  flex-direction: column;
+}
+
+.cfui-resizable-panel {
+  overflow: auto;
+}
+
+.cfui-resizable-handle {
+  position: relative;
+  display: flex;
+  width: 1px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cfui-line);
+  transition: background-color 150ms ease;
+  user-select: none;
+  touch-action: none;
+}
+
+.cfui-resizable-handle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  transform: translateX(-50%);
+}
+
+.cfui-resizable-handle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--cfui-brand);
+}
+
+.cfui-resizable-handle:hover,
+.cfui-resizable-handle[data-separator-active],
+.cfui-resizable-handle[data-resize-handle-active] {
+  background-color: var(--cfui-brand);
+}
+
+.cfui-resizable-group[data-orientation="vertical"] > .cfui-resizable-handle,
+.cfui-resizable-group[data-group-orientation="vertical"] > .cfui-resizable-handle,
+.cfui-resizable-group[data-panel-group-direction="vertical"] > .cfui-resizable-handle,
+.cfui-resizable-group-vertical > .cfui-resizable-handle,
+.cfui-resizable-handle[data-orientation="vertical"] {
+  height: 1px;
+  width: 100%;
+}
+
+.cfui-resizable-group[data-orientation="vertical"] > .cfui-resizable-handle::after,
+.cfui-resizable-group[data-group-orientation="vertical"] > .cfui-resizable-handle::after,
+.cfui-resizable-group[data-panel-group-direction="vertical"] > .cfui-resizable-handle::after,
+.cfui-resizable-group-vertical > .cfui-resizable-handle::after,
+.cfui-resizable-handle[data-orientation="vertical"]::after {
+  left: 0;
+  width: 100%;
+  height: 8px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+.cfui-resizable-handle-icon-container {
+  z-index: 10;
+  display: flex;
+  height: 16px;
+  width: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cfui-radius-sm, 4px);
+  border: 1px solid var(--cfui-line);
+  background-color: var(--cfui-base);
+  box-shadow: 0 1px 2px 0 var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+}
+
+.cfui-resizable-handle-icon {
+  height: 10px;
+  width: 10px;
+  color: var(--cfui-text-muted);
+}

@@ -1,0 +1,6 @@
+@import "./surface.css";
+
+/* LayerCard alias styles */
+.cfui-layer-card {
+  box-sizing: border-box;
+}

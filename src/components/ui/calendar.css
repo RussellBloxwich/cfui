@@ -1,0 +1,277 @@
+/* Scoped calendar styles for CFUI */
+
+.cfui-calendar {
+  display: inline-block;
+  padding: 12px;
+  background-color: var(--cfui-base, var(--color-kumo-base, #ffffff));
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  border-radius: var(--cfui-radius-lg, 8px);
+}
+
+.cfui-calendar-months {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .cfui-calendar-months {
+    flex-direction: row;
+  }
+}
+
+.cfui-calendar-month {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cfui-calendar-month-caption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  height: 32px;
+}
+
+.cfui-calendar-caption-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  user-select: none;
+}
+
+.cfui-calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cfui-calendar-nav-button {
+  position: absolute;
+  top: 4px;
+  height: 28px;
+  width: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cfui-radius-md, 6px);
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.cfui-calendar-nav-button:hover:not(:disabled) {
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  background-color: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5));
+}
+
+.cfui-calendar-nav-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--cfui-brand, var(--color-kumo-brand, #f6821f));
+}
+
+.cfui-calendar-nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.cfui-calendar-button-previous {
+  left: 4px;
+}
+
+.cfui-calendar-button-next {
+  right: 4px;
+}
+
+.cfui-calendar-nav-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.cfui-calendar-month-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.cfui-calendar-weekdays {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.cfui-calendar-weekday {
+  width: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  user-select: none;
+  color: var(--cfui-text-muted, var(--text-color-kumo-subtle, #71717a));
+}
+
+.cfui-calendar-week {
+  display: flex;
+  width: 100%;
+  margin-top: 4px;
+  justify-content: space-between;
+}
+
+.cfui-calendar-day {
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cfui-calendar-day:focus-within {
+  position: relative;
+  z-index: 20;
+}
+
+.cfui-calendar-day-button {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: var(--cfui-radius-md, 6px);
+  border: 0;
+  background-color: transparent;
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f));
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.cfui-calendar-day-button:hover:not(:disabled) {
+  background-color: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5));
+}
+
+.cfui-calendar-day-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--cfui-brand, var(--color-kumo-brand, #f6821f));
+}
+
+/* DayPicker selected and range states */
+.cfui-calendar-selected,
+.cfui-calendar-selected .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-selected,
+.cfui-calendar [data-selected] > .cfui-calendar-day-button,
+.cfui-calendar [data-selected].cfui-calendar-day-button {
+  background-color: var(--cfui-brand, var(--color-kumo-brand, #f6821f)) !important;
+  color: #ffffff !important;
+  font-weight: 500;
+  border-radius: var(--cfui-radius-md, 6px);
+}
+
+.cfui-calendar-selected:hover,
+.cfui-calendar-selected .cfui-calendar-day-button:hover,
+.cfui-calendar-day-button.cfui-calendar-selected:hover {
+  background-color: var(--cfui-brand-hover, var(--color-kumo-brand-hover, #ea580c)) !important;
+  color: #ffffff !important;
+}
+
+/* Range Start */
+.cfui-calendar-range-start,
+.cfui-calendar-range-start .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-range-start,
+.cfui-calendar [data-range-start] > .cfui-calendar-day-button,
+.cfui-calendar [data-range-start].cfui-calendar-day-button {
+  background-color: var(--cfui-brand, var(--color-kumo-brand, #f6821f)) !important;
+  color: #ffffff !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: var(--cfui-radius-md, 6px) !important;
+  border-bottom-left-radius: var(--cfui-radius-md, 6px) !important;
+  font-weight: 500;
+}
+
+/* Range End */
+.cfui-calendar-range-end,
+.cfui-calendar-range-end .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-range-end,
+.cfui-calendar [data-range-end] > .cfui-calendar-day-button,
+.cfui-calendar [data-range-end].cfui-calendar-day-button {
+  background-color: var(--cfui-brand, var(--color-kumo-brand, #f6821f)) !important;
+  color: #ffffff !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: var(--cfui-radius-md, 6px) !important;
+  border-bottom-right-radius: var(--cfui-radius-md, 6px) !important;
+  font-weight: 500;
+}
+
+/* Range Middle */
+.cfui-calendar-range-middle,
+.cfui-calendar-range-middle .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-range-middle,
+.cfui-calendar [data-range-middle] > .cfui-calendar-day-button,
+.cfui-calendar [data-range-middle].cfui-calendar-day-button {
+  background-color: var(--cfui-tint, var(--color-kumo-tint, #f4f4f5)) !important;
+  color: var(--cfui-text, var(--text-color-kumo-default, #1f1f1f)) !important;
+  border-radius: 0 !important;
+}
+
+.cfui-calendar-range-middle:hover,
+.cfui-calendar-range-middle .cfui-calendar-day-button:hover,
+.cfui-calendar-day-button.cfui-calendar-range-middle:hover {
+  background-color: var(--cfui-fill, var(--color-kumo-fill, #e4e4e7)) !important;
+}
+
+/* Today */
+.cfui-calendar-today,
+.cfui-calendar-today .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-today,
+.cfui-calendar [data-today] > .cfui-calendar-day-button,
+.cfui-calendar [data-today].cfui-calendar-day-button {
+  font-weight: 600;
+  color: var(--cfui-brand, var(--color-kumo-brand, #f6821f));
+  box-shadow: inset 0 0 0 1px var(--cfui-brand, var(--color-kumo-brand, #f6821f));
+  border-radius: var(--cfui-radius-md, 6px);
+}
+
+/* Outside month days */
+.cfui-calendar-outside,
+.cfui-calendar-outside .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-outside,
+.cfui-calendar [data-outside] > .cfui-calendar-day-button,
+.cfui-calendar [data-outside].cfui-calendar-day-button {
+  color: var(--cfui-text-placeholder, var(--text-color-kumo-placeholder, #a1a1aa));
+  opacity: 0.5;
+}
+
+/* Disabled days */
+.cfui-calendar-disabled,
+.cfui-calendar-disabled .cfui-calendar-day-button,
+.cfui-calendar-day-button.cfui-calendar-disabled,
+.cfui-calendar-day-button:disabled,
+.cfui-calendar [data-disabled] > .cfui-calendar-day-button,
+.cfui-calendar [data-disabled].cfui-calendar-day-button {
+  color: var(--cfui-text-placeholder, var(--text-color-kumo-placeholder, #a1a1aa));
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Hidden days */
+.cfui-calendar-hidden,
+.cfui-calendar [data-hidden] {
+  visibility: hidden;
+}

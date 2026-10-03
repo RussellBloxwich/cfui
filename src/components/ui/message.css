@@ -1,0 +1,125 @@
+/* message.css - Cloudflare UI Message Module */
+
+.cfui-message {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 10px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  padding: 4px 0;
+}
+
+.cfui-message--start {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.cfui-message--end {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* Avatar */
+.cfui-message-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background-color: var(--cfui-fill, #e6e6e6);
+  color: var(--cfui-text-muted, #767676);
+  font-size: 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+  overflow: hidden;
+  align-self: flex-start;
+  user-select: none;
+}
+
+.cfui-message-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cfui-message-avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content Area */
+.cfui-message-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.cfui-message--start .cfui-message-content {
+  align-items: flex-start;
+}
+
+.cfui-message--end .cfui-message-content {
+  align-items: flex-end;
+}
+
+/* Header Slot */
+.cfui-message-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: var(--cfui-small-text-size, 12px);
+  color: var(--cfui-text-muted, #767676);
+  font-weight: 500;
+}
+
+.cfui-message-header--start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.cfui-message-header--end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Footer Slot: clears avatar metadata naturally by sitting at base of content stack */
+.cfui-message-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--cfui-text-muted, #8c8c8c);
+}
+
+.cfui-message-footer--start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.cfui-message-footer--end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* MessageGroup */
+.cfui-message-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.cfui-message-group--start {
+  align-items: flex-start;
+}
+
+.cfui-message-group--end {
+  align-items: flex-end;
+}

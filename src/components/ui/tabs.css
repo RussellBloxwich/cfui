@@ -1,0 +1,124 @@
+/* tabs.css - Cloudflare UI Tabs styling */
+
+.cfui-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cfui-tabs-list {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  background-color: var(--cfui-recessed, oklch(96% 0 0));
+  border-radius: var(--cfui-radius-lg, 8px);
+  padding: 2px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.cfui-tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.cfui-tabs-list--sm {
+  height: 26px;
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 2px;
+}
+
+.cfui-tabs-list--line {
+  background-color: transparent;
+  border-bottom: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  border-radius: 0;
+  padding: 0;
+  height: auto;
+  gap: 16px;
+}
+
+.cfui-tabs-trigger {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 0 10px;
+  height: 32px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cfui-tabs-trigger:hover {
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+}
+
+.cfui-tabs-trigger:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 1px;
+}
+
+.cfui-tabs-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cfui-tabs-trigger[data-state="active"] {
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  background-color: var(--cfui-base, #ffffff);
+  border-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  box-shadow: 0 1px 2px var(--cfui-shadow-drop, oklch(0% 0 0 / 0.08));
+}
+
+.cfui-tabs-trigger--sm {
+  height: 22px;
+  padding: 0 8px;
+  font-size: var(--cfui-small-text-size, 12px);
+  border-radius: var(--cfui-radius-sm, 4px);
+}
+
+.cfui-tabs-trigger--line {
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 8px 4px;
+  height: auto;
+  background-color: transparent;
+}
+
+.cfui-tabs-trigger--line[data-state="active"] {
+  background-color: transparent;
+  border-bottom-color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  box-shadow: none;
+}
+
+.cfui-tabs-content {
+  margin-top: 8px;
+  outline: none;
+  font-family: var(--cfui-font-sans, inherit);
+  font-size: var(--cfui-text-size, 14px);
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+}
+
+.cfui-tabs-content:focus-visible {
+  outline: 2px solid var(--cfui-brand, oklch(57.72% 0.2324 260));
+  outline-offset: 2px;
+  border-radius: var(--cfui-radius-sm, 4px);
+}

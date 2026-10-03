@@ -1,0 +1,1450 @@
+{
+  "schemaVersion": 1,
+  "package": "cfui",
+  "version": "0.1.0",
+  "moduleCount": 83,
+  "familyCount": 11,
+  "packageExportPathCount": 171,
+  "note": "The count includes nonvisual providers, hooks, and stores. Partial appearance references do not establish every state, viewport, or theme. Direct tests cover named contracts, not entire component APIs.",
+  "families": [
+    {
+      "id": "01-actions",
+      "modules": [
+        "button",
+        "button-group",
+        "badge",
+        "toggle",
+        "toggle-group",
+        "avatar",
+        "aspect-ratio"
+      ]
+    },
+    {
+      "id": "02-fields",
+      "modules": [
+        "input",
+        "textarea",
+        "label",
+        "field",
+        "input-group",
+        "checkbox",
+        "radio-group",
+        "switch",
+        "form",
+        "search-field",
+        "input-otp",
+        "native-select"
+      ]
+    },
+    {
+      "id": "03-selection",
+      "modules": [
+        "select",
+        "combobox",
+        "command"
+      ]
+    },
+    {
+      "id": "04-overlays",
+      "modules": [
+        "dialog",
+        "alert-dialog",
+        "sheet",
+        "drawer",
+        "popover",
+        "hover-card",
+        "tooltip"
+      ]
+    },
+    {
+      "id": "05-menus",
+      "modules": [
+        "dropdown-menu",
+        "context-menu",
+        "navigation-menu",
+        "menubar"
+      ]
+    },
+    {
+      "id": "06-navigation",
+      "modules": [
+        "accordion",
+        "tabs",
+        "collapsible",
+        "breadcrumb",
+        "pagination",
+        "sidebar",
+        "toolbar"
+      ]
+    },
+    {
+      "id": "07-content",
+      "modules": [
+        "card",
+        "alert",
+        "empty",
+        "item",
+        "separator",
+        "typography",
+        "kbd",
+        "spinner",
+        "skeleton",
+        "progress"
+      ]
+    },
+    {
+      "id": "08-data",
+      "modules": [
+        "table",
+        "data-table",
+        "scroll-area",
+        "resizable",
+        "slider",
+        "carousel",
+        "toast",
+        "toaster",
+        "use-toast"
+      ]
+    },
+    {
+      "id": "09-advanced",
+      "modules": [
+        "calendar",
+        "date-picker",
+        "date-range-picker",
+        "chart",
+        "sonner"
+      ]
+    },
+    {
+      "id": "10-dashboard",
+      "modules": [
+        "banner",
+        "surface",
+        "meter",
+        "tag-input",
+        "sensitive-input",
+        "clipboard-text",
+        "code",
+        "table-of-contents",
+        "number-field",
+        "top-nav",
+        "layer-card",
+        "inline-copy-text"
+      ]
+    },
+    {
+      "id": "11-messaging",
+      "modules": [
+        "direction",
+        "attachment",
+        "bubble",
+        "message",
+        "message-scroller",
+        "marker",
+        "questionnaire"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "module": "button",
+      "family": "01-actions",
+      "source": "src/components/ui/button.tsx",
+      "publicImportPaths": [
+        "cfui/button",
+        "cfui/components/ui/button"
+      ],
+      "stylesheet": "src/components/ui/button.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Normal standard and compact controls; selected, disabled, loading, invalid and extra size variants are not uniformly captured."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "button-group",
+      "family": "01-actions",
+      "source": "src/components/ui/button-group.tsx",
+      "publicImportPaths": [
+        "cfui/button-group",
+        "cfui/components/ui/button-group"
+      ],
+      "stylesheet": "src/components/ui/button-group.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "badge",
+      "family": "01-actions",
+      "source": "src/components/ui/badge.tsx",
+      "publicImportPaths": [
+        "cfui/badge",
+        "cfui/components/ui/badge"
+      ],
+      "stylesheet": "src/components/ui/badge.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Record status tags inform the visual treatment; general badge variants are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "toggle",
+      "family": "01-actions",
+      "source": "src/components/ui/toggle.tsx",
+      "publicImportPaths": [
+        "cfui/toggle",
+        "cfui/components/ui/toggle"
+      ],
+      "stylesheet": "src/components/ui/toggle.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "toggle-group",
+      "family": "01-actions",
+      "source": "src/components/ui/toggle-group.tsx",
+      "publicImportPaths": [
+        "cfui/toggle-group",
+        "cfui/components/ui/toggle-group"
+      ],
+      "stylesheet": "src/components/ui/toggle-group.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "avatar",
+      "family": "01-actions",
+      "source": "src/components/ui/avatar.tsx",
+      "publicImportPaths": [
+        "cfui/avatar",
+        "cfui/components/ui/avatar"
+      ],
+      "stylesheet": "src/components/ui/avatar.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Header/avatar treatment is a partial reference; fallback, loading and size variants are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "aspect-ratio",
+      "family": "01-actions",
+      "source": "src/components/ui/aspect-ratio.tsx",
+      "publicImportPaths": [
+        "cfui/aspect-ratio",
+        "cfui/components/ui/aspect-ratio"
+      ],
+      "stylesheet": "src/components/ui/aspect-ratio.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "input",
+      "family": "02-fields",
+      "source": "src/components/ui/input.tsx",
+      "publicImportPaths": [
+        "cfui/input",
+        "cfui/components/ui/input"
+      ],
+      "stylesheet": "src/components/ui/input.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Normal native fields and helper text; invalid and extra size variants are adaptations."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "textarea",
+      "family": "02-fields",
+      "source": "src/components/ui/textarea.tsx",
+      "publicImportPaths": [
+        "cfui/textarea",
+        "cfui/components/ui/textarea"
+      ],
+      "stylesheet": "src/components/ui/textarea.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Composer field treatment is a partial reference; general textarea states are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "label",
+      "family": "02-fields",
+      "source": "src/components/ui/label.tsx",
+      "publicImportPaths": [
+        "cfui/label",
+        "cfui/components/ui/label"
+      ],
+      "stylesheet": "src/components/ui/label.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Native form labels and helper text."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "field",
+      "family": "02-fields",
+      "source": "src/components/ui/field.tsx",
+      "publicImportPaths": [
+        "cfui/field",
+        "cfui/components/ui/field"
+      ],
+      "stylesheet": "src/components/ui/field.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/fields-menus.test.tsx"
+      ]
+    },
+    {
+      "module": "input-group",
+      "family": "02-fields",
+      "source": "src/components/ui/input-group.tsx",
+      "publicImportPaths": [
+        "cfui/input-group",
+        "cfui/components/ui/input-group"
+      ],
+      "stylesheet": "src/components/ui/input-group.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/fields-menus.test.tsx"
+      ]
+    },
+    {
+      "module": "checkbox",
+      "family": "02-fields",
+      "source": "src/components/ui/checkbox.tsx",
+      "publicImportPaths": [
+        "cfui/checkbox",
+        "cfui/components/ui/checkbox"
+      ],
+      "stylesheet": "src/components/ui/checkbox.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Captured checkbox markup; Radix interactions and uncaptured states use the common library contract."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "radio-group",
+      "family": "02-fields",
+      "source": "src/components/ui/radio-group.tsx",
+      "publicImportPaths": [
+        "cfui/radio-group",
+        "cfui/components/ui/radio-group"
+      ],
+      "stylesheet": "src/components/ui/radio-group.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Native radio treatment; Radix compounds are an adaptation."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "switch",
+      "family": "02-fields",
+      "source": "src/components/ui/switch.tsx",
+      "publicImportPaths": [
+        "cfui/switch",
+        "cfui/components/ui/switch"
+      ],
+      "stylesheet": "src/components/ui/switch.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Captured switch/settings treatment; controlled behavior uses Radix."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "form",
+      "family": "02-fields",
+      "source": "src/components/ui/form.tsx",
+      "publicImportPaths": [
+        "cfui/form",
+        "cfui/components/ui/form"
+      ],
+      "stylesheet": "src/components/ui/form.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "search-field",
+      "family": "02-fields",
+      "source": "src/components/ui/search-field.tsx",
+      "publicImportPaths": [
+        "cfui/search-field",
+        "cfui/components/ui/search-field"
+      ],
+      "stylesheet": "src/components/ui/search-field.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Palette search field appearance; clear and controlled/uncontrolled behavior are CFUI adaptations."
+      },
+      "behaviorTests": [
+        "tests/fields-menus.test.tsx"
+      ]
+    },
+    {
+      "module": "input-otp",
+      "family": "02-fields",
+      "source": "src/components/ui/input-otp.tsx",
+      "publicImportPaths": [
+        "cfui/input-otp",
+        "cfui/components/ui/input-otp"
+      ],
+      "stylesheet": "src/components/ui/input-otp.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "native-select",
+      "family": "02-fields",
+      "source": "src/components/ui/native-select.tsx",
+      "publicImportPaths": [
+        "cfui/native-select",
+        "cfui/components/ui/native-select"
+      ],
+      "stylesheet": "src/components/ui/native-select.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Native select appearance; generic field sizing and variants are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "select",
+      "family": "03-selection",
+      "source": "src/components/ui/select.tsx",
+      "publicImportPaths": [
+        "cfui/select",
+        "cfui/components/ui/select"
+      ],
+      "stylesheet": "src/components/ui/select.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Select/list treatment is a partial reference; Radix popup behavior and all variants are not directly captured."
+      },
+      "behaviorTests": [
+        "tests/overlays-navigation.test.tsx"
+      ]
+    },
+    {
+      "module": "combobox",
+      "family": "03-selection",
+      "source": "src/components/ui/combobox.tsx",
+      "publicImportPaths": [
+        "cfui/combobox",
+        "cfui/components/ui/combobox"
+      ],
+      "stylesheet": "src/components/ui/combobox.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Captured selection/search markup; generic object values, multi-value chips and collection composition are adaptations."
+      },
+      "behaviorTests": [
+        "tests/advanced.test.tsx"
+      ]
+    },
+    {
+      "module": "command",
+      "family": "03-selection",
+      "source": "src/components/ui/command.tsx",
+      "publicImportPaths": [
+        "cfui/command",
+        "cfui/components/ui/command"
+      ],
+      "stylesheet": "src/components/ui/command.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Open palette and filtered command results; arbitrary command data and additional states are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "dialog",
+      "family": "04-overlays",
+      "source": "src/components/ui/dialog.tsx",
+      "publicImportPaths": [
+        "cfui/dialog",
+        "cfui/components/ui/dialog"
+      ],
+      "stylesheet": "src/components/ui/dialog.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Palette dialog surface informs generic modal styling; every generic dialog layout is not directly captured."
+      },
+      "behaviorTests": [
+        "tests/overlays-navigation.test.tsx"
+      ]
+    },
+    {
+      "module": "alert-dialog",
+      "family": "04-overlays",
+      "source": "src/components/ui/alert-dialog.tsx",
+      "publicImportPaths": [
+        "cfui/alert-dialog",
+        "cfui/components/ui/alert-dialog"
+      ],
+      "stylesheet": "src/components/ui/alert-dialog.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "sheet",
+      "family": "04-overlays",
+      "source": "src/components/ui/sheet.tsx",
+      "publicImportPaths": [
+        "cfui/sheet",
+        "cfui/components/ui/sheet"
+      ],
+      "stylesheet": "src/components/ui/sheet.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "drawer",
+      "family": "04-overlays",
+      "source": "src/components/ui/drawer.tsx",
+      "publicImportPaths": [
+        "cfui/drawer",
+        "cfui/components/ui/drawer"
+      ],
+      "stylesheet": "src/components/ui/drawer.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "popover",
+      "family": "04-overlays",
+      "source": "src/components/ui/popover.tsx",
+      "publicImportPaths": [
+        "cfui/popover",
+        "cfui/components/ui/popover"
+      ],
+      "stylesheet": "src/components/ui/popover.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Open account/date surfaces and their triggers; additional placements are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "hover-card",
+      "family": "04-overlays",
+      "source": "src/components/ui/hover-card.tsx",
+      "publicImportPaths": [
+        "cfui/hover-card",
+        "cfui/components/ui/hover-card"
+      ],
+      "stylesheet": "src/components/ui/hover-card.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "tooltip",
+      "family": "04-overlays",
+      "source": "src/components/ui/tooltip.tsx",
+      "publicImportPaths": [
+        "cfui/tooltip",
+        "cfui/components/ui/tooltip"
+      ],
+      "stylesheet": "src/components/ui/tooltip.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "dropdown-menu",
+      "family": "05-menus",
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "publicImportPaths": [
+        "cfui/dropdown-menu",
+        "cfui/components/ui/dropdown-menu"
+      ],
+      "stylesheet": "src/components/ui/dropdown-menu.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Row/account menu treatment is partial; nested menus and all states are adaptations."
+      },
+      "behaviorTests": [
+        "tests/fields-menus.test.tsx"
+      ]
+    },
+    {
+      "module": "context-menu",
+      "family": "05-menus",
+      "source": "src/components/ui/context-menu.tsx",
+      "publicImportPaths": [
+        "cfui/context-menu",
+        "cfui/components/ui/context-menu"
+      ],
+      "stylesheet": "src/components/ui/context-menu.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "navigation-menu",
+      "family": "05-menus",
+      "source": "src/components/ui/navigation-menu.tsx",
+      "publicImportPaths": [
+        "cfui/navigation-menu",
+        "cfui/components/ui/navigation-menu"
+      ],
+      "stylesheet": "src/components/ui/navigation-menu.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/fields-menus.test.tsx"
+      ]
+    },
+    {
+      "module": "menubar",
+      "family": "05-menus",
+      "source": "src/components/ui/menubar.tsx",
+      "publicImportPaths": [
+        "cfui/menubar",
+        "cfui/components/ui/menubar"
+      ],
+      "stylesheet": "src/components/ui/menubar.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "accordion",
+      "family": "06-navigation",
+      "source": "src/components/ui/accordion.tsx",
+      "publicImportPaths": [
+        "cfui/accordion",
+        "cfui/components/ui/accordion"
+      ],
+      "stylesheet": "src/components/ui/accordion.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/sidebar-composition.test.tsx"
+      ]
+    },
+    {
+      "module": "tabs",
+      "family": "06-navigation",
+      "source": "src/components/ui/tabs.tsx",
+      "publicImportPaths": [
+        "cfui/tabs",
+        "cfui/components/ui/tabs"
+      ],
+      "stylesheet": "src/components/ui/tabs.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Compact tab treatment; all orientations and activation modes are not visually captured."
+      },
+      "behaviorTests": [
+        "tests/overlays-navigation.test.tsx"
+      ]
+    },
+    {
+      "module": "collapsible",
+      "family": "06-navigation",
+      "source": "src/components/ui/collapsible.tsx",
+      "publicImportPaths": [
+        "cfui/collapsible",
+        "cfui/components/ui/collapsible"
+      ],
+      "stylesheet": "src/components/ui/collapsible.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "breadcrumb",
+      "family": "06-navigation",
+      "source": "src/components/ui/breadcrumb.tsx",
+      "publicImportPaths": [
+        "cfui/breadcrumb",
+        "cfui/components/ui/breadcrumb"
+      ],
+      "stylesheet": "src/components/ui/breadcrumb.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "pagination",
+      "family": "06-navigation",
+      "source": "src/components/ui/pagination.tsx",
+      "publicImportPaths": [
+        "cfui/pagination",
+        "cfui/components/ui/pagination"
+      ],
+      "stylesheet": "src/components/ui/pagination.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/sidebar-composition.test.tsx"
+      ]
+    },
+    {
+      "module": "sidebar",
+      "family": "06-navigation",
+      "source": "src/components/ui/sidebar.tsx",
+      "publicImportPaths": [
+        "cfui/sidebar",
+        "cfui/components/ui/sidebar"
+      ],
+      "stylesheet": "src/components/ui/sidebar.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Desktop navigation/panel treatment; mobile drawer and collapse transitions are adaptations."
+      },
+      "behaviorTests": [
+        "tests/sidebar-composition.test.tsx"
+      ]
+    },
+    {
+      "module": "toolbar",
+      "family": "06-navigation",
+      "source": "src/components/ui/toolbar.tsx",
+      "publicImportPaths": [
+        "cfui/toolbar",
+        "cfui/components/ui/toolbar"
+      ],
+      "stylesheet": "src/components/ui/toolbar.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Captured compact toolbar controls; generic compounds are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "card",
+      "family": "07-content",
+      "source": "src/components/ui/card.tsx",
+      "publicImportPaths": [
+        "cfui/card",
+        "cfui/components/ui/card"
+      ],
+      "stylesheet": "src/components/ui/card.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Dashboard cards and summary surfaces; general card variants are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "alert",
+      "family": "07-content",
+      "source": "src/components/ui/alert.tsx",
+      "publicImportPaths": [
+        "cfui/alert",
+        "cfui/components/ui/alert"
+      ],
+      "stylesheet": "src/components/ui/alert.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "empty",
+      "family": "07-content",
+      "source": "src/components/ui/empty.tsx",
+      "publicImportPaths": [
+        "cfui/empty",
+        "cfui/components/ui/empty"
+      ],
+      "stylesheet": "src/components/ui/empty.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "item",
+      "family": "07-content",
+      "source": "src/components/ui/item.tsx",
+      "publicImportPaths": [
+        "cfui/item",
+        "cfui/components/ui/item"
+      ],
+      "stylesheet": "src/components/ui/item.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Measured navigation/palette rows; additional item compositions are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "separator",
+      "family": "07-content",
+      "source": "src/components/ui/separator.tsx",
+      "publicImportPaths": [
+        "cfui/separator",
+        "cfui/components/ui/separator"
+      ],
+      "stylesheet": "src/components/ui/separator.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "typography",
+      "family": "07-content",
+      "source": "src/components/ui/typography.tsx",
+      "publicImportPaths": [
+        "cfui/typography",
+        "cfui/components/ui/typography"
+      ],
+      "stylesheet": "src/components/ui/typography.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Measured page/form variants are available. The default editorial heading scale is inferred."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "kbd",
+      "family": "07-content",
+      "source": "src/components/ui/kbd.tsx",
+      "publicImportPaths": [
+        "cfui/kbd",
+        "cfui/components/ui/kbd"
+      ],
+      "stylesheet": "src/components/ui/kbd.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Palette shortcut labels; arbitrary key combinations and group layouts are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "spinner",
+      "family": "07-content",
+      "source": "src/components/ui/spinner.tsx",
+      "publicImportPaths": [
+        "cfui/spinner",
+        "cfui/components/ui/spinner"
+      ],
+      "stylesheet": "src/components/ui/spinner.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "skeleton",
+      "family": "07-content",
+      "source": "src/components/ui/skeleton.tsx",
+      "publicImportPaths": [
+        "cfui/skeleton",
+        "cfui/components/ui/skeleton"
+      ],
+      "stylesheet": "src/components/ui/skeleton.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "progress",
+      "family": "07-content",
+      "source": "src/components/ui/progress.tsx",
+      "publicImportPaths": [
+        "cfui/progress",
+        "cfui/components/ui/progress"
+      ],
+      "stylesheet": "src/components/ui/progress.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "table",
+      "family": "08-data",
+      "source": "src/components/ui/table.tsx",
+      "publicImportPaths": [
+        "cfui/table",
+        "cfui/components/ui/table"
+      ],
+      "stylesheet": "src/components/ui/table.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Dense DNS and measured R2 tables; generic selected/sorted/empty states are adaptations."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "data-table",
+      "family": "08-data",
+      "source": "src/components/ui/data-table.tsx",
+      "publicImportPaths": [
+        "cfui/data-table",
+        "cfui/components/ui/data-table"
+      ],
+      "stylesheet": "src/components/ui/data-table.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Table presentation is observed in part; TanStack sorting/pagination/selection are library behavior."
+      },
+      "behaviorTests": [
+        "tests/data-table-page-size.test.tsx"
+      ]
+    },
+    {
+      "module": "scroll-area",
+      "family": "08-data",
+      "source": "src/components/ui/scroll-area.tsx",
+      "publicImportPaths": [
+        "cfui/scroll-area",
+        "cfui/components/ui/scroll-area"
+      ],
+      "stylesheet": "src/components/ui/scroll-area.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "resizable",
+      "family": "08-data",
+      "source": "src/components/ui/resizable.tsx",
+      "publicImportPaths": [
+        "cfui/resizable",
+        "cfui/components/ui/resizable"
+      ],
+      "stylesheet": "src/components/ui/resizable.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "slider",
+      "family": "08-data",
+      "source": "src/components/ui/slider.tsx",
+      "publicImportPaths": [
+        "cfui/slider",
+        "cfui/components/ui/slider"
+      ],
+      "stylesheet": "src/components/ui/slider.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "carousel",
+      "family": "08-data",
+      "source": "src/components/ui/carousel.tsx",
+      "publicImportPaths": [
+        "cfui/carousel",
+        "cfui/components/ui/carousel"
+      ],
+      "stylesheet": "src/components/ui/carousel.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "toast",
+      "family": "08-data",
+      "source": "src/components/ui/toast.tsx",
+      "publicImportPaths": [
+        "cfui/toast",
+        "cfui/components/ui/toast"
+      ],
+      "stylesheet": "src/components/ui/toast.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "toaster",
+      "family": "08-data",
+      "source": "src/components/ui/toaster.tsx",
+      "publicImportPaths": [
+        "cfui/toaster",
+        "cfui/components/ui/toaster"
+      ],
+      "stylesheet": "src/components/ui/toaster.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "use-toast",
+      "family": "08-data",
+      "source": "src/components/ui/use-toast.tsx",
+      "publicImportPaths": [
+        "cfui/use-toast",
+        "cfui/components/ui/use-toast"
+      ],
+      "stylesheet": "src/components/ui/use-toast.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "Provider/hook has no independent dashboard appearance."
+      },
+      "behaviorTests": [
+        "tests/core-actions-toast.test.tsx"
+      ]
+    },
+    {
+      "module": "calendar",
+      "family": "09-advanced",
+      "source": "src/components/ui/calendar.tsx",
+      "publicImportPaths": [
+        "cfui/calendar",
+        "cfui/components/ui/calendar"
+      ],
+      "stylesheet": "src/components/ui/calendar.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/advanced.test.tsx"
+      ]
+    },
+    {
+      "module": "date-picker",
+      "family": "09-advanced",
+      "source": "src/components/ui/date-picker.tsx",
+      "publicImportPaths": [
+        "cfui/date-picker",
+        "cfui/components/ui/date-picker"
+      ],
+      "stylesheet": "src/components/ui/date-picker.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Date trigger/popover presentation is partial; full calendar day-grid states are inferred."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "date-range-picker",
+      "family": "09-advanced",
+      "source": "src/components/ui/date-range-picker.tsx",
+      "publicImportPaths": [
+        "cfui/date-range-picker",
+        "cfui/components/ui/date-range-picker"
+      ],
+      "stylesheet": "src/components/ui/date-range-picker.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Range trigger/surface is partial; day-grid, presets and narrow layout are inferred."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "chart",
+      "family": "09-advanced",
+      "source": "src/components/ui/chart.tsx",
+      "publicImportPaths": [
+        "cfui/chart",
+        "cfui/components/ui/chart"
+      ],
+      "stylesheet": "src/components/ui/chart.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Chart/legend/filter surface is partial; Recharts tooltip/legend compounds and all series variants are adaptations."
+      },
+      "behaviorTests": [
+        "tests/chart-regression.test.tsx"
+      ]
+    },
+    {
+      "module": "sonner",
+      "family": "09-advanced",
+      "source": "src/components/ui/sonner.tsx",
+      "publicImportPaths": [
+        "cfui/sonner",
+        "cfui/components/ui/sonner"
+      ],
+      "stylesheet": "src/components/ui/sonner.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "banner",
+      "family": "10-dashboard",
+      "source": "src/components/ui/banner.tsx",
+      "publicImportPaths": [
+        "cfui/banner",
+        "cfui/components/ui/banner"
+      ],
+      "stylesheet": "src/components/ui/banner.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "surface",
+      "family": "10-dashboard",
+      "source": "src/components/ui/surface.tsx",
+      "publicImportPaths": [
+        "cfui/surface",
+        "cfui/components/ui/surface"
+      ],
+      "stylesheet": "src/components/ui/surface.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Neutral surfaces/elevation provide a partial visual reference."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "meter",
+      "family": "10-dashboard",
+      "source": "src/components/ui/meter.tsx",
+      "publicImportPaths": [
+        "cfui/meter",
+        "cfui/components/ui/meter"
+      ],
+      "stylesheet": "src/components/ui/meter.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "tag-input",
+      "family": "10-dashboard",
+      "source": "src/components/ui/tag-input.tsx",
+      "publicImportPaths": [
+        "cfui/tag-input",
+        "cfui/components/ui/tag-input"
+      ],
+      "stylesheet": "src/components/ui/tag-input.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "sensitive-input",
+      "family": "10-dashboard",
+      "source": "src/components/ui/sensitive-input.tsx",
+      "publicImportPaths": [
+        "cfui/sensitive-input",
+        "cfui/components/ui/sensitive-input"
+      ],
+      "stylesheet": "src/components/ui/sensitive-input.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "clipboard-text",
+      "family": "10-dashboard",
+      "source": "src/components/ui/clipboard-text.tsx",
+      "publicImportPaths": [
+        "cfui/clipboard-text",
+        "cfui/components/ui/clipboard-text"
+      ],
+      "stylesheet": "src/components/ui/clipboard-text.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/advanced.test.tsx"
+      ]
+    },
+    {
+      "module": "code",
+      "family": "10-dashboard",
+      "source": "src/components/ui/code.tsx",
+      "publicImportPaths": [
+        "cfui/code",
+        "cfui/components/ui/code"
+      ],
+      "stylesheet": "src/components/ui/code.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "table-of-contents",
+      "family": "10-dashboard",
+      "source": "src/components/ui/table-of-contents.tsx",
+      "publicImportPaths": [
+        "cfui/table-of-contents",
+        "cfui/components/ui/table-of-contents"
+      ],
+      "stylesheet": "src/components/ui/table-of-contents.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "number-field",
+      "family": "10-dashboard",
+      "source": "src/components/ui/number-field.tsx",
+      "publicImportPaths": [
+        "cfui/number-field",
+        "cfui/components/ui/number-field"
+      ],
+      "stylesheet": "src/components/ui/number-field.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/advanced.test.tsx"
+      ]
+    },
+    {
+      "module": "top-nav",
+      "family": "10-dashboard",
+      "source": "src/components/ui/top-nav.tsx",
+      "publicImportPaths": [
+        "cfui/top-nav",
+        "cfui/components/ui/top-nav"
+      ],
+      "stylesheet": "src/components/ui/top-nav.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Header/account controls provide a partial reference; responsive generic navigation is adapted."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "layer-card",
+      "family": "10-dashboard",
+      "source": "src/components/ui/layer-card.tsx",
+      "publicImportPaths": [
+        "cfui/layer-card",
+        "cfui/components/ui/layer-card"
+      ],
+      "stylesheet": "src/components/ui/layer-card.css",
+      "appearance": {
+        "status": "partially-observed",
+        "notes": "Card/layer treatment is a partial reference; layered combinations are adapted."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "inline-copy-text",
+      "family": "10-dashboard",
+      "source": "src/components/ui/inline-copy-text.tsx",
+      "publicImportPaths": [
+        "cfui/inline-copy-text",
+        "cfui/components/ui/inline-copy-text"
+      ],
+      "stylesheet": "src/components/ui/inline-copy-text.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "direction",
+      "family": "11-messaging",
+      "source": "src/components/ui/direction.tsx",
+      "publicImportPaths": [
+        "cfui/direction",
+        "cfui/components/ui/direction"
+      ],
+      "stylesheet": "src/components/ui/direction.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "Provider/hook has no independent dashboard appearance."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "attachment",
+      "family": "11-messaging",
+      "source": "src/components/ui/attachment.tsx",
+      "publicImportPaths": [
+        "cfui/attachment",
+        "cfui/components/ui/attachment"
+      ],
+      "stylesheet": "src/components/ui/attachment.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "bubble",
+      "family": "11-messaging",
+      "source": "src/components/ui/bubble.tsx",
+      "publicImportPaths": [
+        "cfui/bubble",
+        "cfui/components/ui/bubble"
+      ],
+      "stylesheet": "src/components/ui/bubble.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "message",
+      "family": "11-messaging",
+      "source": "src/components/ui/message.tsx",
+      "publicImportPaths": [
+        "cfui/message",
+        "cfui/components/ui/message"
+      ],
+      "stylesheet": "src/components/ui/message.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "message-scroller",
+      "family": "11-messaging",
+      "source": "src/components/ui/message-scroller.tsx",
+      "publicImportPaths": [
+        "cfui/message-scroller",
+        "cfui/components/ui/message-scroller"
+      ],
+      "stylesheet": "src/components/ui/message-scroller.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/messaging.test.tsx"
+      ]
+    },
+    {
+      "module": "marker",
+      "family": "11-messaging",
+      "source": "src/components/ui/marker.tsx",
+      "publicImportPaths": [
+        "cfui/marker",
+        "cfui/components/ui/marker"
+      ],
+      "stylesheet": "src/components/ui/marker.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": []
+    },
+    {
+      "module": "questionnaire",
+      "family": "11-messaging",
+      "source": "src/components/ui/questionnaire.tsx",
+      "publicImportPaths": [
+        "cfui/questionnaire",
+        "cfui/components/ui/questionnaire"
+      ],
+      "stylesheet": "src/components/ui/questionnaire.css",
+      "appearance": {
+        "status": "token-backed-adaptation",
+        "notes": "No module-specific dashboard appearance is established by the bounded reference archive. Styling adapts the captured shared foundation; this is an inference, not a captured match."
+      },
+      "behaviorTests": [
+        "tests/messaging.test.tsx"
+      ]
+    }
+  ]
+}

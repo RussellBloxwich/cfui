@@ -1,0 +1,172 @@
+/* Headings: Inferred editorial scale as base default */
+.cfui-typography-h1 {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+}
+
+/* Directly observed dashboard capture: R2 title 30px / 36px (from 09-r2-storage) */
+.cfui-typography-h1--r2,
+.cfui-typography-h1[data-appearance="r2"] {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+/* Directly observed dashboard capture: Workers heading 20px / 25px (from 04-workers-list) */
+.cfui-typography-h1--workers,
+.cfui-typography-h1[data-appearance="workers"] {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+/* Headings: Inferred editorial scale as base default */
+.cfui-typography-h2 {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+}
+
+/* Directly observed dashboard capture: Workers section heading 24px / 32px (from 04-workers-list) */
+.cfui-typography-h2--measured,
+.cfui-typography-h2[data-appearance="measured"] {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+/* Directly observed dashboard capture: Bucket form heading 20px / 25px (from 10-bucket-form) */
+.cfui-typography-h2--form,
+.cfui-typography-h2[data-appearance="form"] {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+/* Headings: Inferred editorial scale as base default */
+.cfui-typography-h3 {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+}
+
+/* Directly observed dashboard capture: Workers subsection 14px / 21px (from 04-workers-list) */
+.cfui-typography-h3--measured,
+.cfui-typography-h3[data-appearance="measured"] {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+.cfui-typography-h4 {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.005em;
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+}
+
+.cfui-typography-p {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--cfui-text, #1f2937);
+}
+
+.cfui-typography-lead {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--cfui-text-muted, #4b5563);
+}
+
+.cfui-typography-large {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+}
+
+.cfui-typography-small {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--cfui-small-text-size, 12px);
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--cfui-text-muted, #6b7280);
+}
+
+.cfui-typography-muted {
+  margin: 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--cfui-text-muted, #6b7280);
+}
+
+.cfui-typography-code {
+  font-family: var(--cfui-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 5px;
+  border-radius: var(--cfui-radius-sm, 4px);
+  background-color: var(--cfui-fill, #e5e7eb);
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+  border: 1px solid var(--cfui-line, rgba(0, 0, 0, 0.08));
+}
+
+.cfui-typography-blockquote {
+  margin: 16px 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--cfui-line, rgba(0, 0, 0, 0.15));
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 22px;
+  color: var(--cfui-text-muted, #4b5563);
+}
+
+.cfui-typography-list {
+  margin: 8px 0;
+  padding-left: 24px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--cfui-text, #1f2937);
+  list-style-type: disc;
+}
+
+.cfui-typography-list--ordered {
+  list-style-type: decimal;
+}
+
+.cfui-typography-list-item {
+  margin: 4px 0;
+}

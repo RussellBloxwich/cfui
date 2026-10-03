@@ -1,0 +1,165 @@
+/* Cloudflare UI Dropdown Menu styles */
+.cfui-dropdown-menu-content,
+.cfui-dropdown-menu-sub-content {
+  z-index: 50;
+  min-width: 8rem;
+  overflow: hidden;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-base, #ffffff);
+  padding: 4px;
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  box-shadow: 0 4px 12px var(--cfui-shadow-drop, oklch(0% 0 0 / 0.08)), 0 0 0 1px var(--cfui-shadow-edge, oklch(0% 0 0 / 0.12));
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  animation-duration: 150ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cfui-dropdown-menu-content[data-state="open"],
+.cfui-dropdown-menu-sub-content[data-state="open"] {
+  animation-name: cfui-dropdown-menu-enter;
+}
+
+.cfui-dropdown-menu-content[data-state="closed"],
+.cfui-dropdown-menu-sub-content[data-state="closed"] {
+  animation-name: cfui-dropdown-menu-exit;
+}
+
+@keyframes cfui-dropdown-menu-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cfui-dropdown-menu-exit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+.cfui-dropdown-menu-item,
+.cfui-dropdown-menu-checkbox-item,
+.cfui-dropdown-menu-radio-item,
+.cfui-dropdown-menu-sub-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 6px 8px;
+  font-size: var(--cfui-text-size, 13px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.cfui-dropdown-menu-item[data-inset="true"],
+.cfui-dropdown-menu-sub-trigger[data-inset="true"] {
+  padding-left: 28px;
+}
+
+.cfui-dropdown-menu-checkbox-item,
+.cfui-dropdown-menu-radio-item {
+  padding-left: 28px;
+}
+
+.cfui-dropdown-menu-item:hover,
+.cfui-dropdown-menu-item[data-highlighted],
+.cfui-dropdown-menu-checkbox-item:hover,
+.cfui-dropdown-menu-checkbox-item[data-highlighted],
+.cfui-dropdown-menu-radio-item:hover,
+.cfui-dropdown-menu-radio-item[data-highlighted],
+.cfui-dropdown-menu-sub-trigger:hover,
+.cfui-dropdown-menu-sub-trigger[data-highlighted],
+.cfui-dropdown-menu-sub-trigger[data-state="open"] {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-dropdown-menu-item[data-disabled],
+.cfui-dropdown-menu-checkbox-item[data-disabled],
+.cfui-dropdown-menu-radio-item[data-disabled],
+.cfui-dropdown-menu-sub-trigger[data-disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-dropdown-menu-item--destructive {
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+}
+
+.cfui-dropdown-menu-item--destructive:hover,
+.cfui-dropdown-menu-item--destructive[data-highlighted] {
+  background-color: var(--cfui-danger-tint, oklch(93.6% 0.032 17.7 / 0.42));
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+}
+
+.cfui-dropdown-menu-item-indicator {
+  position: absolute;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.cfui-dropdown-menu-indicator-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+}
+
+.cfui-dropdown-menu-indicator-dot {
+  width: 6px;
+  height: 6px;
+  color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+}
+
+.cfui-dropdown-menu-sub-trigger-icon {
+  margin-left: auto;
+  width: 14px;
+  height: 14px;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-dropdown-menu-label {
+  padding: 6px 8px;
+  font-size: var(--cfui-small-text-size, 12px);
+  font-weight: 600;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  user-select: none;
+}
+
+.cfui-dropdown-menu-label[data-inset="true"] {
+  padding-left: 28px;
+}
+
+.cfui-dropdown-menu-separator {
+  height: 1px;
+  margin: 4px -4px;
+  background-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+}
+
+.cfui-dropdown-menu-shortcut {
+  margin-left: auto;
+  font-size: 11px;
+  font-family: var(--cfui-font-mono, monospace);
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  letter-spacing: 0.05em;
+}

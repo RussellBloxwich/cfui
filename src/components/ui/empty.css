@@ -1,0 +1,102 @@
+.cfui-empty {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: var(--cfui-radius-lg, 8px);
+  background-color: transparent;
+  color: var(--cfui-text, #1f2937);
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+}
+
+.cfui-empty--bordered {
+  background-color: var(--cfui-base, #ffffff);
+  border: 1px solid var(--cfui-line, rgba(0, 0, 0, 0.1));
+}
+
+.cfui-empty--dashed {
+  background-color: var(--cfui-recessed, rgba(0, 0, 0, 0.02));
+  border: 1px dashed var(--cfui-line, rgba(0, 0, 0, 0.15));
+}
+
+.cfui-empty--recessed {
+  background-color: var(--cfui-recessed, rgba(0, 0, 0, 0.03));
+}
+
+.cfui-empty--sm {
+  padding: 24px 16px;
+}
+
+.cfui-empty--md {
+  padding: 40px 24px;
+}
+
+.cfui-empty--lg {
+  padding: 56px 32px;
+}
+
+.cfui-empty-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.cfui-empty-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.cfui-empty-media,
+.cfui-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--cfui-text-muted, #6b7280);
+}
+
+.cfui-empty-media svg,
+.cfui-empty-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.cfui-empty-title {
+  margin: 0 0 6px 0;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--cfui-text-strong, var(--cfui-text, #111827));
+  letter-spacing: -0.01em;
+}
+
+.cfui-empty-description {
+  margin: 0 0 16px 0;
+  max-width: 440px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cfui-text-muted, #6b7280);
+}
+
+.cfui-empty-actions,
+.cfui-empty-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

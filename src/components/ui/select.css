@@ -1,0 +1,180 @@
+/* Select component styling scoped to cfui */
+
+.cfui-select-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, rgba(0, 0, 0, 0.1));
+  background-color: var(--cfui-control, #ffffff);
+  color: var(--cfui-text, #313131);
+  font-family: var(--cfui-font-sans, system-ui, -apple-system, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  height: 36px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.cfui-select-trigger:hover:not(:disabled) {
+  background-color: var(--cfui-tint, #f5f5f5);
+}
+
+.cfui-select-trigger:focus-visible {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--cfui-brand, #0051c3);
+}
+
+.cfui-select-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: var(--cfui-control, #ffffff);
+  color: var(--cfui-text-muted, #767676);
+}
+
+.cfui-select-trigger[data-size="sm"],
+.cfui-select-trigger-sm {
+  height: 26px;
+  padding: 0 8px;
+  font-size: 12px;
+  border-radius: var(--cfui-radius-md, 6px);
+}
+
+.cfui-select-trigger[data-size="lg"],
+.cfui-select-trigger-lg {
+  height: 40px;
+  padding: 0 14px;
+  font-size: 16px;
+  border-radius: var(--cfui-radius-lg, 8px);
+}
+
+.cfui-select-trigger > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cfui-select-trigger > span[data-placeholder] {
+  color: var(--cfui-text-placeholder, #767676);
+}
+
+.cfui-select-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  color: var(--cfui-text-muted, #767676);
+  transition: transform 200ms ease;
+}
+
+.cfui-select-trigger[data-state="open"] .cfui-select-icon {
+  transform: rotate(180deg);
+}
+
+.cfui-select-icon-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cfui-select-trigger[data-size="sm"] .cfui-select-icon-svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cfui-select-content {
+  position: relative;
+  z-index: 50;
+  max-height: 384px;
+  min-width: 8rem;
+  overflow: hidden;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-hairline, rgba(0, 0, 0, 0.08));
+  background-color: var(--cfui-elevated, #ffffff);
+  color: var(--cfui-text, #313131);
+  box-shadow: 0 4px 16px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.12));
+  font-family: var(--cfui-font-sans, system-ui, -apple-system, sans-serif);
+}
+
+.cfui-select-viewport {
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.cfui-select-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 6px 8px 6px 32px;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  box-sizing: border-box;
+  color: var(--cfui-text, #313131);
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.cfui-select-item[data-highlighted] {
+  background-color: var(--cfui-tint, #f5f5f5);
+  color: var(--cfui-text-strong, #141414);
+}
+
+.cfui-select-item[data-disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cfui-select-item-indicator-wrapper {
+  position: absolute;
+  left: 8px;
+  display: flex;
+  height: 14px;
+  width: 14px;
+  align-items: center;
+  justify-content: center;
+  color: var(--cfui-brand, #0051c3);
+}
+
+.cfui-select-item-indicator-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cfui-select-label {
+  padding: 6px 8px 6px 32px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cfui-text-muted, #767676);
+}
+
+.cfui-select-separator {
+  height: 1px;
+  margin: 4px -4px;
+  background-color: var(--cfui-hairline, rgba(0, 0, 0, 0.08));
+}
+
+.cfui-select-scroll-up-button,
+.cfui-select-scroll-down-button {
+  display: flex;
+  cursor: default;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  color: var(--cfui-text-muted, #767676);
+}
+
+.cfui-select-scroll-button-svg {
+  width: 16px;
+  height: 16px;
+}

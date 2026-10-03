@@ -1,0 +1,97 @@
+.cfui-number-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--cfui-font-sans, system-ui, sans-serif);
+  box-sizing: border-box;
+}
+
+.cfui-number-field-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-number-field-group {
+  position: relative;
+  display: flex;
+  height: 36px;
+  width: 100%;
+  max-width: 160px;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-control, #fff);
+  box-shadow: 0 1px 2px 0 var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cfui-number-field-group:focus-within {
+  border-color: transparent;
+  outline: 2px solid var(--cfui-focus, oklch(15% 0 0));
+  outline-offset: -1px;
+}
+
+.cfui-number-field-group--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--cfui-fill, oklch(92.2% 0 0));
+}
+
+.cfui-number-field-input {
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+  flex: 1 1 0%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-family: var(--cfui-font-mono, monospace);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+  outline: none;
+}
+
+.cfui-number-field-input:disabled {
+  cursor: not-allowed;
+}
+
+.cfui-number-field-decrement,
+.cfui-number-field-increment {
+  display: inline-flex;
+  height: 100%;
+  width: 32px;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  border: none;
+  padding: 0;
+  outline: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cfui-number-field-decrement {
+  border-right: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+}
+
+.cfui-number-field-increment {
+  border-left: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+}
+
+.cfui-number-field-decrement:hover:not(:disabled),
+.cfui-number-field-increment:hover:not(:disabled) {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-number-field-decrement:disabled,
+.cfui-number-field-increment:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}

@@ -1,0 +1,224 @@
+.cfui-toast-viewport {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  max-height: 100vh;
+  width: 100%;
+  flex-direction: column-reverse;
+  padding: 16px;
+  gap: 8px;
+  outline: none;
+}
+
+@media (min-width: 640px) {
+  .cfui-toast-viewport {
+    bottom: 0;
+    right: 0;
+    top: auto;
+    flex-direction: column;
+    max-width: 420px;
+  }
+}
+
+.cfui-toast {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
+  border-radius: var(--cfui-radius-lg, 8px);
+  border: 1px solid var(--cfui-line);
+  padding: 16px 32px 16px 16px;
+  box-shadow: 0 4px 6px -1px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1)),
+              0 2px 4px -2px var(--cfui-shadow-drop, rgba(0, 0, 0, 0.1));
+  transition: all 200ms ease;
+  font-family: var(--cfui-font-sans, system-ui, sans-serif);
+  background-color: var(--cfui-base);
+  color: var(--cfui-text);
+}
+
+.cfui-toast[data-swipe="cancel"] {
+  transform: translateX(0);
+}
+
+.cfui-toast[data-swipe="end"] {
+  transform: translateX(var(--radix-toast-swipe-end-x));
+}
+
+.cfui-toast[data-swipe="move"] {
+  transform: translateX(var(--radix-toast-swipe-move-x));
+  transition: none;
+}
+
+.cfui-toast[data-state="open"] {
+  animation: cfui-toast-in 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cfui-toast[data-state="closed"] {
+  animation: cfui-toast-out 100ms ease-in forwards;
+}
+
+@keyframes cfui-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cfui-toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.cfui-toast-default {
+  border-color: var(--cfui-line);
+  background-color: var(--cfui-base);
+  color: var(--cfui-text);
+}
+
+.cfui-toast-destructive {
+  border-color: var(--cfui-danger);
+  background-color: var(--cfui-danger-tint);
+  color: var(--cfui-danger);
+}
+
+.cfui-toast-success {
+  border-color: var(--cfui-success);
+  background-color: var(--cfui-success-tint);
+  color: var(--cfui-success);
+}
+
+.cfui-toast-warning {
+  border-color: var(--cfui-warning);
+  background-color: var(--cfui-warning-tint);
+  color: var(--cfui-warning);
+}
+
+.cfui-toast-info {
+  border-color: var(--cfui-info);
+  background-color: var(--cfui-info-tint);
+  color: var(--cfui-info);
+}
+
+.cfui-toast-action {
+  display: inline-flex;
+  height: 28px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cfui-radius-md, 6px);
+  border: 1px solid var(--cfui-line);
+  background-color: transparent;
+  padding: 0 10px;
+  font-size: var(--cfui-small-text-size, 12px);
+  font-weight: 500;
+  color: var(--cfui-text);
+  transition: background-color 150ms ease, color 150ms ease;
+  cursor: pointer;
+}
+
+.cfui-toast-action:hover {
+  background-color: var(--cfui-tint);
+}
+
+.cfui-toast-action:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--cfui-brand);
+}
+
+.cfui-toast-action:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cfui-toast-destructive .cfui-toast-action {
+  border-color: var(--cfui-danger);
+  color: var(--cfui-danger);
+}
+
+.cfui-toast-destructive .cfui-toast-action:hover {
+  background-color: var(--cfui-danger-tint);
+}
+
+.cfui-toast-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border-radius: var(--cfui-radius-md, 6px);
+  padding: 4px;
+  color: var(--cfui-text-muted);
+  opacity: 0.7;
+  transition: opacity 150ms ease, background-color 150ms ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cfui-toast-close:hover {
+  opacity: 1;
+  background-color: var(--cfui-tint);
+}
+
+.cfui-toast-close:focus-visible {
+  opacity: 1;
+  outline: none;
+  box-shadow: 0 0 0 1px var(--cfui-brand);
+}
+
+.cfui-toast-destructive .cfui-toast-close {
+  color: var(--cfui-danger);
+}
+
+.cfui-toast-title {
+  font-size: var(--cfui-text-size, 14px);
+  font-weight: 600;
+  color: var(--cfui-text-strong);
+  line-height: 1.4;
+}
+
+.cfui-toast-description {
+  font-size: var(--cfui-small-text-size, 12px);
+  color: var(--cfui-text-muted);
+  line-height: 1.4;
+}
+
+.cfui-toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.cfui-toast-icon {
+  height: 14px;
+  width: 14px;
+}
+
+.cfui-toast-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,37 @@
+.cfui-form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cfui-form-label {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  margin: 0;
+}
+
+.cfui-form-label--error {
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+}
+
+.cfui-form-description {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  margin: 0;
+}
+
+.cfui-form-message {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+  margin: 0;
+}

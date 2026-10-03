@@ -1,0 +1,30 @@
+.cfui-skeleton {
+  box-sizing: border-box;
+  background-color: var(--cfui-fill, #e5e7eb);
+  border-radius: var(--cfui-radius-md, 6px);
+  animation: cfui-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  display: block;
+}
+
+.cfui-skeleton--circle {
+  border-radius: 9999px;
+}
+
+.cfui-skeleton--text {
+  height: 14px;
+  border-radius: var(--cfui-radius-sm, 4px);
+  margin-bottom: 6px;
+}
+
+.cfui-skeleton--text:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes cfui-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}

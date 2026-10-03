@@ -1,0 +1,132 @@
+.cfui-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cfui-field--horizontal {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cfui-field--responsive {
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (min-width: 640px) {
+  .cfui-field--responsive {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+.cfui-field--disabled {
+  opacity: 0.6;
+}
+
+.cfui-field-label {
+  margin: 0;
+}
+
+.cfui-field-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cfui-field-description {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+  margin: 0;
+}
+
+.cfui-field-error {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+  margin: 0;
+}
+
+.cfui-field-error-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cfui-field-error-item {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+  margin: 0;
+}
+
+.cfui-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.cfui-fieldset--disabled {
+  opacity: 0.6;
+}
+
+.cfui-field-legend {
+  padding: 0;
+  margin-bottom: 8px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-field-legend--label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.cfui-field-title {
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  margin: 0;
+}
+
+.cfui-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.cfui-field-separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  margin: 8px 0;
+}

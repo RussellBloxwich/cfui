@@ -1,0 +1,6 @@
+@import "./clipboard-text.css";
+
+/* InlineCopyText alias styles */
+.cfui-inline-copy-text {
+  box-sizing: border-box;
+}

@@ -1,0 +1,33 @@
+.cfui-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+  user-select: none;
+  cursor: pointer;
+}
+
+.cfui-label--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.cfui-label-asterisk {
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+  font-size: 13px;
+  line-height: 1;
+}
+
+.cfui-label--sm {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cfui-label--lg {
+  font-size: 14px;
+  line-height: 20px;
+}

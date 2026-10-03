@@ -1,0 +1,121 @@
+.cfui-clipboard-text {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.cfui-clipboard-text:focus-visible {
+  outline: 2px solid var(--cfui-focus, oklch(15% 0 0));
+  outline-offset: 1px;
+}
+
+.cfui-clipboard-text:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cfui-clipboard-text--inline {
+  gap: 6px;
+  font-family: var(--cfui-font-mono, monospace);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+  user-select: all;
+  text-underline-offset: 2px;
+  padding: 0;
+}
+
+.cfui-clipboard-text--inline:hover {
+  color: var(--cfui-brand, oklch(57.72% 0.2324 260));
+  text-decoration: underline;
+}
+
+.cfui-clipboard-text--button {
+  height: 36px;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--cfui-radius-md, 6px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-control, #fff);
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+  box-shadow: 0 1px 2px 0 var(--cfui-shadow-drop, rgba(0, 0, 0, 0.05));
+}
+
+.cfui-clipboard-text--button:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+}
+
+.cfui-clipboard-text--button:active {
+  background-color: var(--cfui-fill, oklch(92.2% 0 0));
+}
+
+.cfui-clipboard-text--ghost {
+  height: 28px;
+  justify-content: center;
+  gap: 6px;
+  border-radius: var(--cfui-radius-sm, 4px);
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cfui-text-muted, oklch(55.6% 0 0));
+}
+
+.cfui-clipboard-text--ghost:hover {
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text-strong, oklch(14.5% 0 0));
+}
+
+.cfui-clipboard-text--badge {
+  gap: 6px;
+  border-radius: var(--cfui-radius-md, 6px);
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  padding: 2px 8px;
+  font-family: var(--cfui-font-mono, monospace);
+  font-size: 12px;
+  color: var(--cfui-text, oklch(20.5% 0 none));
+}
+
+.cfui-clipboard-text--badge:hover {
+  background-color: var(--cfui-fill, oklch(92.2% 0 0));
+}
+
+.cfui-clipboard-text-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cfui-clipboard-text-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.cfui-clipboard-text-icon--copied {
+  color: var(--cfui-success, oklch(59.6% 0.145 163.225));
+  transform: scale(1.1);
+}
+
+.cfui-clipboard-text-icon--error {
+  color: var(--cfui-danger, oklch(63.7% 0.237 25.331));
+}
+
+.cfui-clipboard-text:hover .cfui-clipboard-text-icon--idle {
+  opacity: 1;
+}
+
+.cfui-clipboard-text-icon--idle {
+  opacity: 0.7;
+}

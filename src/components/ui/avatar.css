@@ -1,0 +1,71 @@
+/* Cloudflare CFUI Avatar styles */
+
+.cfui-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  user-select: none;
+  border: 1px solid var(--cfui-line, oklch(14.5% 0 0 / 0.1));
+  box-sizing: border-box;
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+}
+
+.cfui-avatar--circle {
+  border-radius: 9999px;
+}
+
+.cfui-avatar--square {
+  border-radius: var(--cfui-radius-lg, 8px);
+}
+
+/* Avatar Sizes */
+.cfui-avatar--size-default {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.cfui-avatar--size-sm {
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+}
+
+.cfui-avatar--size-lg {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.cfui-avatar--size-xl {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+/* Avatar Image */
+.cfui-avatar__image {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Avatar Fallback */
+.cfui-avatar__fallback {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cfui-tint, oklch(97% 0 0));
+  color: var(--cfui-text, oklch(21% 0.006 285.885));
+  font-family: var(--cfui-font-sans, "Inter Variable", ui-sans-serif, system-ui, sans-serif);
+  font-weight: 500;
+  line-height: 1;
+  border-radius: inherit;
+}
